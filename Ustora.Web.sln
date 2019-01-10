@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ustora.Web", "Ustora.Web\Ustora.Web.csproj", "{CB60AB50-7C4F-4AF5-9373-807D7EEBC723}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ustora.Data", "Ustora.Data\Ustora.Data.csproj", "{BACD0648-1883-4520-A885-27CC2A2CF430}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ustora.Service", "Ustora.Service\Ustora.Service.csproj", "{7DE92B40-14CF-453B-99D8-18DB13AF7D3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{CB60AB50-7C4F-4AF5-9373-807D7EEBC723}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB60AB50-7C4F-4AF5-9373-807D7EEBC723}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB60AB50-7C4F-4AF5-9373-807D7EEBC723}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BACD0648-1883-4520-A885-27CC2A2CF430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BACD0648-1883-4520-A885-27CC2A2CF430}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BACD0648-1883-4520-A885-27CC2A2CF430}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BACD0648-1883-4520-A885-27CC2A2CF430}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DE92B40-14CF-453B-99D8-18DB13AF7D3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DE92B40-14CF-453B-99D8-18DB13AF7D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DE92B40-14CF-453B-99D8-18DB13AF7D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DE92B40-14CF-453B-99D8-18DB13AF7D3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,16 +7,20 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Ustora.Data;
+using Ustora.Data.Interfaces;
+using Ustora.Service;
 
 namespace Ustora.Web
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration config)
         {
-            Configuration = configuration;
+            Configuration = config;
         }
 
         public IConfiguration Configuration { get; }
@@ -24,15 +28,13 @@ namespace Ustora.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
-
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddSingleton(Configuration);
+            services.AddScoped<IProductService, ProductService>();
+
+            services.AddDbContext<UstoraContext>(options
+                => options.UseSqlServer(Configuration.GetConnectionString("UstoraConnection")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +42,8 @@ namespace Ustora.Web
         {
             if (env.IsDevelopment())
             {
+
+                SeedData.Initialize(app);
                 app.UseDeveloperExceptionPage();
             }
             else

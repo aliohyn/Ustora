@@ -4,26 +4,28 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Ustora.Web.Models;
+using Ustora.Data.Interfaces;
+using Ustora.Web.ViewModels;
 
 namespace Ustora.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private IProductService _productService;
+        public HomeController(IProductService productService)
+        {
+            _productService = productService;
+        }
+
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            MainPageViewModel model = new MainPageViewModel
+            {
+                MainSlider = _productService.GetMainPageSlider().ToList(),
+                Brands = _productService.GetMainPageBrands().ToList(),
+                LatestProducts = _productService.GetMainPageLatest().ToList()
+            };
+            return View(model);
         }
     }
 }
