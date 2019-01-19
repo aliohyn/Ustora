@@ -7,7 +7,7 @@ namespace Ustora.Data.Models
 {
     public class RelatedProduct
     {
-        public int Id { get; set; }
+        public int RelateId { get; set; }
         [Required]
         public int BaseProductId { get; set; }
         [Required]

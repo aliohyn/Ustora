@@ -10,7 +10,7 @@ using Ustora.Data;
 namespace Ustora.Data.Migrations
 {
     [DbContext(typeof(UstoraContext))]
-    [Migration("20190110005528_Initial")]
+    [Migration("20190117203438_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,7 +23,7 @@ namespace Ustora.Data.Migrations
 
             modelBuilder.Entity("Ustora.Data.Models.Brand", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("BrandId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -32,31 +32,60 @@ namespace Ustora.Data.Migrations
                     b.Property<string>("Name")
                         .IsRequired();
 
-                    b.HasKey("Id");
+                    b.HasKey("BrandId");
 
                     b.ToTable("Brands");
                 });
 
             modelBuilder.Entity("Ustora.Data.Models.CartLine", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("CartLineId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ProductId");
+                    b.Property<int?>("OrderId");
+
+                    b.Property<int?>("ProductId");
 
                     b.Property<int>("Quantity");
 
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
+                    b.HasKey("CartLineId");
 
                     b.ToTable("CartLines");
                 });
 
+            modelBuilder.Entity("Ustora.Data.Models.Order", b =>
+                {
+                    b.Property<int>("OrderId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("City")
+                        .IsRequired();
+
+                    b.Property<string>("Country")
+                        .IsRequired();
+
+                    b.Property<string>("Home")
+                        .IsRequired();
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.Property<string>("Phone")
+                        .IsRequired();
+
+                    b.Property<string>("Street")
+                        .IsRequired();
+
+                    b.HasKey("OrderId");
+
+                    b.ToTable("Orders");
+                });
+
             modelBuilder.Entity("Ustora.Data.Models.Product", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -83,7 +112,7 @@ namespace Ustora.Data.Migrations
 
                     b.Property<bool>("TopSellerShow");
 
-                    b.HasKey("Id");
+                    b.HasKey("ProductId");
 
                     b.HasIndex("BrandId");
 
@@ -94,36 +123,36 @@ namespace Ustora.Data.Migrations
 
             modelBuilder.Entity("Ustora.Data.Models.RelatedProduct", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("RelatedProductId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("BaseProductId");
 
-                    b.Property<int>("RelatedProductId");
+                    b.Property<int>("RelateId");
 
-                    b.HasKey("Id");
+                    b.HasKey("RelatedProductId");
 
                     b.ToTable("RelatedProducts");
                 });
 
             modelBuilder.Entity("Ustora.Data.Models.Section", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("SectionId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
                         .IsRequired();
 
-                    b.HasKey("Id");
+                    b.HasKey("SectionId");
 
                     b.ToTable("Sections");
                 });
 
             modelBuilder.Entity("Ustora.Data.Models.Slide", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("SlideId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -137,17 +166,9 @@ namespace Ustora.Data.Migrations
                     b.Property<string>("Name")
                         .IsRequired();
 
-                    b.HasKey("Id");
+                    b.HasKey("SlideId");
 
                     b.ToTable("Slides");
-                });
-
-            modelBuilder.Entity("Ustora.Data.Models.CartLine", b =>
-                {
-                    b.HasOne("Ustora.Data.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Ustora.Data.Models.Product", b =>

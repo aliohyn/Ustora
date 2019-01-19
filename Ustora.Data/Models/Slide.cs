@@ -7,8 +7,7 @@ namespace Ustora.Data.Models
 {
     public class Slide
     {
-
-        public int Id { get; set; }
+        public int SlideId { get; set; }
         [Required]
         public string Name { get; set; }
         public string Description { get; set; }

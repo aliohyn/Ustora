@@ -1,27 +1,30 @@
 ﻿@using Ustora.Web.ViewModels
 @model Ustora.Web.ViewModels.MainPageViewModel
 
-<div class="slider-area">
-    <!-- Slider -->
-    <div class="block-slider block-slider4">
-        <ul class="" id="bxslider-home4">
-            @foreach(var slide in Model.MainSlider)
-            {
-            <li>
-                <img src="@slide.ImagePath" alt="Slide">
-                <div class="caption-group">
-                    <h2 class="caption title">
-                        @slide.Name
-                    </h2>
-                    <h4 class="caption subtitle">@slide.Description</h4>
-                    <a class="caption button-radius" href="@slide.Link"><span class="icon"></span>Подробрее</a>
-                </div>
-            </li>
-            }
-        </ul>
-    </div>
-    <!-- ./Slider -->
-</div> <!-- End slider area -->
+@if (Model.MainSlider.Any())
+{
+    <div class="slider-area">
+        <!-- Slider -->
+        <div class="block-slider block-slider4">
+            <ul class="" id="bxslider-home4">
+                @foreach (var slide in Model.MainSlider)
+                {
+                    <li>
+                        <img src="@slide.ImagePath" alt="Slide">
+                        <div class="caption-group">
+                            <h2 class="caption title">
+                                @slide.Name
+                            </h2>
+                            <h4 class="caption subtitle">@slide.Description</h4>
+                            <a class="caption button-radius" href="@slide.Link"><span class="icon"></span>See Details</a>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+        <!-- ./Slider -->
+    </div> <!-- End slider area -->
+}
 
 <div class="promo-area">
     <div class="zigzag-bottom"></div>
@@ -55,57 +58,63 @@
     </div>
 </div> <!-- End promo area -->
 
-<div class="maincontent-area">
-    <div class="zigzag-bottom"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="latest-product">
-                    <h2 class="section-title">Latest Products</h2>
-                    <div class="product-carousel">
-                        @foreach (var latestProd in Model.LatestProducts)
-                        {
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="@latestProd.ImagePath" alt="@latestProd.Name">
-                                    <div class="product-hover">
-                                        <a href="/catalog/detail/@latestProd.Id" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> В корзину</a>
-                                        <a href="/catalog/detail/@latestProd.Id" class="view-details-link"><i class="fa fa-link"></i> Подробнее</a>
+
+@if (Model.LatestProducts.Any())
+{
+    <div class="maincontent-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="latest-product">
+                        <h2 class="section-title">Latest Products</h2>
+                        <div class="product-carousel">
+                            @foreach (var latestProd in Model.LatestProducts)
+                            {
+                                <div class="single-product">
+                                    <div class="product-f-image">
+                                        <img src="@latestProd.ImagePath" alt="@latestProd.Name">
+                                        <div class="product-hover">
+                                            <a href="/catalog/@latestProd.ProductId" class="view-details-link"><i class="fa fa-link"></i> See Details</a>
+                                        </div>
+                                    </div>
+
+                                    <h2><a href="/catalog/@latestProd.ProductId">@latestProd.Name</a></h2>
+
+                                    <div class="product-carousel-price">
+                                        <ins>@latestProd.Price</ins>
+                                        @if (latestProd.OldPrice > 0)
+                                        {
+                                            <del>@latestProd.OldPrice</del>
+                                        }
                                     </div>
                                 </div>
-
-                                <h2><a href="/catalog/detail/@latestProd.Id">@latestProd.Name</a></h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>@latestProd.Price</ins>
-                                    @if (latestProd.OldPrice > 0)
-                                    {
-                                        <del>@latestProd.OldPrice</del>
-                                    }
-                                </div>
-                            </div>
-                        }
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div> <!-- End main content area -->
+    </div> <!-- End main content area -->
+}
 
-<div class="brands-area">
-    <div class="zigzag-bottom"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="brand-wrapper">
-                    <div class="brand-list">
-                        @foreach (var brand in Model.Brands)
-                        {
-                            <img src="@brand.ImagePath" alt="@brand.Name" />
-                        }
+@if (Model.Brands.Any())
+{
+    <div class="brands-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="brand-wrapper">
+                        <div class="brand-list">
+                            @foreach (var brand in Model.Brands)
+                            {
+                                <img src="@brand.ImagePath" alt="@brand.Name" />
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div> <!-- End brands area -->
+    </div> <!-- End brands area -->
+}

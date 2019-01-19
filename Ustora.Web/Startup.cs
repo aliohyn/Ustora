@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Ustora.Data;
-using Ustora.Data.Interfaces;
+using Ustora.Service.Interfaces;
 using Ustora.Service;
 
 namespace Ustora.Web
@@ -31,7 +31,11 @@ namespace Ustora.Web
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddSingleton(Configuration);
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<ICartService, CartService>();
+            services.AddScoped<IOrderService, OrderService>();
 
+            services.AddSession();
+            services.AddMemoryCache();
             services.AddDbContext<UstoraContext>(options
                 => options.UseSqlServer(Configuration.GetConnectionString("UstoraConnection")));
 
@@ -56,12 +60,25 @@ namespace Ustora.Web
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute("cart", "ajax/cart/add/{productId}/{quantity}",
+                    defaults: new { controller = "Cart", action = "AddToCart" });
+                routes.MapRoute("cart", "ajax/cart/remove/{productId}",
+                    defaults: new { controller = "Cart", action = "Remove" });
+                routes.MapRoute("catalog_pagination", "catalog/page{productPage}",
+                    defaults: new { controller = "Catalog", action = "Index" });
+                routes.MapRoute("catalog_detail", "catalog/{id}",
+                    defaults: new { controller = "Catalog", action = "Detail" });
+                routes.MapRoute("catalog", "catalog",
+                    defaults: new { controller = "Catalog", action = "Index" });
+                routes.MapRoute("cart", "cart",
+                    defaults: new { controller = "Cart", action = "Index" });
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}");
             });
         }
     }

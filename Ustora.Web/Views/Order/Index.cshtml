@@ -1,0 +1,65 @@
+﻿@using Ustora.Data.Models
+@model Order
+@{
+    ViewBag.Title = "Shopping Cart";
+}
+
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-content-right">
+                    <div class="woocommerce">
+                        <form class="checkout" asp-action="Make" method="post">
+                            <div id="customer_details" class="col2-set">
+                                <div class="col-1">
+                                    <div class="woocommerce-billing-fields">
+                                        <h3>Billing Details</h3>
+                                        <p class="form-row form-row-first">
+                                            <label>Name</label>
+                                            <input type="text" asp-for="Name" class="input-text">
+                                        </p>
+                                        <p class="form-row form-row-first">
+                                            <label>Street</label>
+                                            <input type="text" asp-for="Street" class="input-text">
+                                        </p>
+                                        <p class="form-row form-row-first">
+                                            <label>Home</label>
+                                            <input type="text" asp-for="Home" class="input-text">
+                                        </p>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-2">
+                                    <div class="woocommerce-shipping-fields">
+                                        <h3 id="ship-to-different-address">
+                                            <label class="checkbox" for="ship-to-different-address-checkbox"></label>
+                                        </h3>
+                                        <div class="shipping_address" style="display: block;">
+                                            <p class="form-row form-row-first">
+                                                <label>Phone</label>
+                                                <input type="text" asp-for="Phone" class="input-text">
+                                            </p>
+                                            <p class="form-row form-row-first">
+                                                <label>Country</label>
+                                                <input type="text" asp-for="Country" class="input-text">
+                                            </p>
+                                            <p class="form-row form-row-first">
+                                                <label>City</label>
+                                                <input type="text" asp-for="City" class="input-text">
+                                            </p>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="submit" value="Place order" class="button alt">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

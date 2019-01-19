@@ -15,5 +15,6 @@ namespace Ustora.Data
         public DbSet<Slide> Slides { get; set; }
         public DbSet<RelatedProduct> RelatedProducts { get; set; }
         public DbSet<Section> Sections { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }

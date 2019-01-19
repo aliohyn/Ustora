@@ -4,7 +4,7 @@ namespace Ustora.Data.Models
 {
     public class Section
     {
-        public int Id { get; set; }
+        public int SectionId { get; set; }
         [Required]
         public string Name { get; set; }
     }

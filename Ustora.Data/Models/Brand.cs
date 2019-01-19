@@ -6,7 +6,7 @@ namespace Ustora.Data.Models
 {
     public class Brand
     {
-        public int Id { get; set; }
+        public int BrandId { get; set; }
         [Required]
         public string Name { get; set; }
         public string ImagePath { get; set; }

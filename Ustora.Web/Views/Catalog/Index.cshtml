@@ -1,0 +1,43 @@
+﻿@using Ustora.Web.ViewModels
+@model Ustora.Web.ViewModels.CatalogViewModel
+@{ 
+    ViewBag.Title = "Shop Page";
+}
+
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            @foreach (var product in Model.Products)
+            {
+            <div class="col-md-3 col-sm-6">
+                <div class="single-shop-product">
+                    <div class="product-upper">
+                        <a href="/catalog/@product.ProductId"><img src="@product.ImagePath" alt="@product.Name"></a>
+                    </div>
+                    <h2><a href="/catalog/@product.ProductId">@product.Name</a></h2>
+                    <div class="product-carousel-price">
+                        <ins>@product.Price</ins>
+                        @if (product.OldPrice > 0)
+                        {
+                            <del>@product.OldPrice</del>
+                        }
+                    </div>
+
+                    <div class="product-option-shop">
+                        <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="@product.ProductId" rel="nofollow" href="javascript:void(0)">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-pagination text-center">
+                    <nav page-model="@Model.PagingInfo">
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

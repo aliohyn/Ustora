@@ -80,16 +80,32 @@ jQuery(document).ready(function($){
     });    
     
     // Bootstrap ScrollPSY
-    $('body').scrollspy({ 
+    $('body').scrollspy({
         target: '.navbar-collapse',
         offset: 95
-    })      
+    });
+
+
+    $('.add_to_cart_button').click(function () {
+        var elemId = $(this).attr("data-product_id");
+        var quatity = $(this).attr("data-quantity");
+        if (elemId) {
+            if (!quatity) {
+                quatity = 1;
+            }
+            $.post("/ajax/cart/add/" + elemId + "/" + quatity, function (data) {
+                alert(data);
+                window.location.reload();
+            });
+        }
+    });
+
+    $('.cart_remove').click(function () {
+        var elemId = $(this).attr("elem_id");
+        if (elemId) {
+            $.post("/ajax/cart/remove/" + elemId, function (data) {
+                window.location.reload();
+            });
+        }
+    });
 });
-
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-10146041-21', 'auto');
-  ga('send', 'pageview');

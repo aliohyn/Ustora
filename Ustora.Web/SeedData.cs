@@ -10,11 +10,11 @@ namespace Ustora.Data
     {
         public static void Initialize(IApplicationBuilder applicationBuilder)
         {
-            addProducts(applicationBuilder);
-            addSlides(applicationBuilder);
+            AddProducts(applicationBuilder);
+            AddSlides(applicationBuilder);
         }
         
-        public static async void addSlides(IApplicationBuilder applicationBuilder)
+        public static async void AddSlides(IApplicationBuilder applicationBuilder)
         {
             using (var serviceScope = applicationBuilder.ApplicationServices.GetRequiredService<IServiceScopeFactory>()
                 .CreateScope())
@@ -58,7 +58,7 @@ namespace Ustora.Data
                 }
             }
         }
-        public static async void addProducts(IApplicationBuilder applicationBuilder)
+        public static async void AddProducts(IApplicationBuilder applicationBuilder)
         {
             using (var serviceScope = applicationBuilder.ApplicationServices.GetRequiredService<IServiceScopeFactory>()
                 .CreateScope())
@@ -78,7 +78,7 @@ namespace Ustora.Data
                         DateUpdate = new DateTime(),
                         MainSliderShow = true,
                         TopSellerShow = true,
-                        Brand = new Brand { Name = "Canon", ImagePath = "/lmg/brand2.png" },
+                        Brand = new Brand { Name = "Canon", ImagePath = "/img/brand2.png" },
                         Section = new Section { Name = "Camera" }
                     });
                     context.Products.Add(new Product()
@@ -91,7 +91,7 @@ namespace Ustora.Data
                         DateUpdate = new DateTime(),
                         MainSliderShow = true,
                         TopSellerShow = true,
-                        Brand = new Brand { Name = "Samsung", ImagePath = "/lmg/brand3.png" },
+                        Brand = new Brand { Name = "Samsung", ImagePath = "/img/brand3.png" },
                         Section = new Section { Name = "Phones" }
                     });
                     context.Products.Add(new Product()
@@ -104,7 +104,7 @@ namespace Ustora.Data
                         DateUpdate = new DateTime(),
                         MainSliderShow = true,
                         TopSellerShow = true,
-                        Brand = new Brand { Name = "Nokia", ImagePath = "/lmg/brand1.png" },
+                        Brand = new Brand { Name = "Nokia", ImagePath = "/img/brand1.png" },
                         Section = new Section { Name = "Phones" }
                     });
                     context.Products.Add(new Product()
@@ -117,7 +117,7 @@ namespace Ustora.Data
                         DateUpdate = new DateTime(),
                         MainSliderShow = true,
                         TopSellerShow = true,
-                        Brand = new Brand { Name = "Nokia", ImagePath = "/lmg/brand1.png" },
+                        Brand = new Brand { Name = "Nokia", ImagePath = "/img/brand1.png" },
                         Section = new Section { Name = "Phones" }
                     });
                     context.Products.Add(new Product()
@@ -130,7 +130,7 @@ namespace Ustora.Data
                         DateUpdate = new DateTime(),
                         MainSliderShow = true,
                         TopSellerShow = true,
-                        Brand = new Brand { Name = "Canon", ImagePath = "/lmg/brand2.png" },
+                        Brand = new Brand { Name = "Canon", ImagePath = "/img/brand2.png" },
                         Section = new Section { Name = "Camera" }
                     });
                     context.Products.Add(new Product()
@@ -143,7 +143,7 @@ namespace Ustora.Data
                         DateUpdate = new DateTime(),
                         MainSliderShow = true,
                         TopSellerShow = true,
-                        Brand = new Brand { Name = "Samsung", ImagePath = "/lmg/brand3.png" },
+                        Brand = new Brand { Name = "Samsung", ImagePath = "/img/brand3.png" },
                         Section = new Section { Name = "Phones" }
                     });
                     context.Products.Add(new Product()
@@ -156,7 +156,7 @@ namespace Ustora.Data
                         DateUpdate = new DateTime(),
                         MainSliderShow = true,
                         TopSellerShow = true,
-                        Brand = new Brand { Name = "Nokia", ImagePath = "/lmg/brand1.png" },
+                        Brand = new Brand { Name = "Nokia", ImagePath = "/img/brand1.png" },
                         Section = new Section { Name = "Phones" }
                     });
                     context.Products.Add(new Product()
@@ -169,7 +169,7 @@ namespace Ustora.Data
                         DateUpdate = new DateTime(),
                         MainSliderShow = true,
                         TopSellerShow = true,
-                        Brand = new Brand { Name = "Nokia", ImagePath = "/lmg/brand1.png" },
+                        Brand = new Brand { Name = "Nokia", ImagePath = "/img/brand1.png" },
                         Section = new Section { Name = "Phones" }
                     });
                     context.SaveChanges();

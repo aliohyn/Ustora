@@ -1,0 +1,97 @@
+﻿@using Ustora.Web.ViewModels
+@model Ustora.Web.ViewModels.CartViewModel
+@{
+    ViewBag.Title = "Shopping Cart";
+}
+
+
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-content-right">
+                    <div class="woocommerce">
+                        @if (Model.Cart != null && Model.Cart.Any())
+                        {
+                            <form method="post" action="/Order">
+                                <table cellspacing="0" class="shop_table cart">
+                                    <thead>
+                                        <tr>
+                                            <th class="product-remove">&nbsp;</th>
+                                            <th class="product-thumbnail">&nbsp;</th>
+                                            <th class="product-name">Product</th>
+                                            <th class="product-price">Price</th>
+                                            <th class="product-quantity">Quantity</th>
+                                            <th class="product-subtotal">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var cartLine in Model.Cart)
+                                        {
+                                            <tr class="cart_item">
+                                                <td class="product-remove">
+                                                    <a elem_id="@cartLine.Product.ProductId" class="cart_remove" href="javascript:void(0)">×</a>
+                                                </td>
+
+                                                <td class="product-thumbnail">
+                                                    <a href="single-product.html"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="@cartLine.Product.ImagePath"></a>
+                                                </td>
+
+                                                <td class="product-name">
+                                                    <a href="/catalog/@cartLine.Product.ProductId">@cartLine.Product.Name</a>
+                                                </td>
+
+                                                <td class="product-price">
+                                                    <span class="amount">@cartLine.Product.Price</span>
+                                                </td>
+
+                                                <td class="product-quantity">
+                                                    <div class="quantity buttons_added">
+                                                        <input type="button" class="minus" value="-">
+                                                        <input type="number" size="4" class="input-text qty text" title="Qty" value="@cartLine.Quantity" min="0" step="1">
+                                                        <input type="button" class="plus" value="+">
+                                                    </div>
+                                                </td>
+
+                                                <td class="product-subtotal">
+                                                    <span class="amount">@cartLine.Product.Price</span>
+                                                </td>
+                                            </tr>
+                                        }
+                                        <tr>
+                                            <td class="actions" colspan="6">
+                                                <a href="/Order">
+                                                    <input type="submit" value="Checkout" name="proceed" class="checkout-button button alt wc-forward">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                            <div class="cart-collaterals">
+                                <div class="cart_totals ">
+                                    <h2>Cart Totals</h2>
+
+                                    <table cellspacing="0">
+                                        <tbody>
+                                            <tr class="cart-subtotal">
+                                                <th>Total sum</th>
+                                                <td><span class="amount">@Model.AllSum</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <p>Ваша корзина пуста</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
