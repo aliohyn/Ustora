@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ustora.Web", "Ustora.Web\Ustora.Web.csproj", "{CB60AB50-7C4F-4AF5-9373-807D7EEBC723}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ustora.Web", "Ustora.Web\Ustora.Web.csproj", "{CB60AB50-7C4F-4AF5-9373-807D7EEBC723}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ustora.Data", "Ustora.Data\Ustora.Data.csproj", "{BACD0648-1883-4520-A885-27CC2A2CF430}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ustora.Data", "Ustora.Data\Ustora.Data.csproj", "{BACD0648-1883-4520-A885-27CC2A2CF430}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ustora.Service", "Ustora.Service\Ustora.Service.csproj", "{7DE92B40-14CF-453B-99D8-18DB13AF7D3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ustora.Service", "Ustora.Service\Ustora.Service.csproj", "{7DE92B40-14CF-453B-99D8-18DB13AF7D3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CD09A589-B8AB-4061-9C65-B6E6156F63AE}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

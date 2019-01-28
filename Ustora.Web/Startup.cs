@@ -44,10 +44,10 @@ namespace Ustora.Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            SeedData.Initialize(app);
+
             if (env.IsDevelopment())
             {
-
-                SeedData.Initialize(app);
                 app.UseDeveloperExceptionPage();
             }
             else
