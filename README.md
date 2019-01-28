@@ -1,12 +1,12 @@
 # Ustora shop with asp.net core 2.2
 
-Simple example of ecommerce project written in personal education purpose. 
+Simple example of ecommerce project made for personal education purpose.
 Some blocks not ready, but site has 
 
 * Main page 
 * Catalog
 * Cart on session
-* Ordering
+* Ordering (without checking errors)
 
 ## Demo
 [ustora.azurewebsites.net](https://ustora.azurewebsites.net/)
