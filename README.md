@@ -9,7 +9,7 @@ Some blocks not ready, but site has
 * Ordering
 
 ## Demo
-[Link](https://ustora.azurewebsites.net/)
+[ustora.azurewebsites.net](https://ustora.azurewebsites.net/)
 
 ## Markup
-[Link](https://freshdesignweb.com/ustora/)
+[freshdesignweb.com/ustora/](https://freshdesignweb.com/ustora/)
