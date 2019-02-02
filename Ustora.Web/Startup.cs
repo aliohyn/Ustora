@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Ustora.Data;
 using Ustora.Service.Interfaces;
 using Ustora.Service;
+using Serilog;
 
 namespace Ustora.Web
 {
@@ -20,6 +21,11 @@ namespace Ustora.Web
     {
         public Startup(IConfiguration config)
         {
+            Log.Logger = new LoggerConfiguration()
+               .MinimumLevel.Debug()
+               .Enrich.FromLogContext()
+               .WriteTo.Seq("http://localhost:5341")
+               .CreateLogger();
             Configuration = config;
         }
 

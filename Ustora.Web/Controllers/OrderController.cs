@@ -10,7 +10,7 @@ namespace Ustora.Web.Controllers
 {
     public class OrderController : Controller
     {
-        private IOrderService _orderService;
+        private readonly IOrderService _orderService;
         public OrderController(IOrderService orderService)
         {
             _orderService = orderService;
@@ -22,18 +22,21 @@ namespace Ustora.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Make(Order order)
+        public IActionResult Index(Order order)
         {
             List<CartLine> cartLines = HttpContext.Session.Get<List<CartLine>>("Cart");
-            if (cartLines != null)
-            {
+            if(cartLines == null || cartLines.Count < 1) {
+                ModelState.AddModelError("", "Your cart is empty");
+            }
+
+            if (ModelState.IsValid) {
                 int orderId = _orderService.Add(order, cartLines);
                 HttpContext.Session.Set<List<CartLine>>("Cart", null);
                 ViewBag.OrderId = orderId;
                 return View("Completed");
+            } else {
+                return View("Index", order);
             }
-            
-            return View("Index", order);
         }
     }
 }

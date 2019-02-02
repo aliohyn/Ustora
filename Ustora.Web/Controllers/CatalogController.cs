@@ -10,7 +10,7 @@ namespace Ustora.Web.Controllers
 {
     public class CatalogController : Controller
     {
-        private IProductService _productService;
+        private readonly IProductService _productService;
         public CatalogController(IProductService productService)
         {
             _productService = productService;

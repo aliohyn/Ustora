@@ -7,7 +7,7 @@ namespace Ustora.Service
 {
     public class CartService : ICartService
     {
-        private UstoraContext _context;
+        private readonly UstoraContext _context;
         public CartService(UstoraContext context)
         {
             _context = context;

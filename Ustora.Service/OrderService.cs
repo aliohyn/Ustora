@@ -7,7 +7,7 @@ namespace Ustora.Service
 {
     public class OrderService : IOrderService
     {
-        private UstoraContext _context;
+        private readonly UstoraContext _context;
 
         public OrderService(UstoraContext context)
         {

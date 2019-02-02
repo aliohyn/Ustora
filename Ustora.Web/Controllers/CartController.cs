@@ -13,8 +13,8 @@ namespace Ustora.Web.Controllers
 {
     public class CartController : Controller
     {
-        private ICartService _cartService;
-        private IProductService _productService;
+        private readonly ICartService _cartService;
+        private readonly IProductService _productService;
         public CartController(ICartService cartService, IProductService productService)
         {
             _cartService = cartService;

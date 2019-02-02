@@ -6,7 +6,7 @@ Some blocks not ready, but site has
 * Main page 
 * Catalog
 * Cart on session
-* Ordering (without checking errors)
+* Ordering
 
 ## Demo
 [ustora.azurewebsites.net](https://ustora.azurewebsites.net/)

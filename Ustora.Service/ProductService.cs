@@ -8,7 +8,7 @@ namespace Ustora.Service
 {
     public class ProductService : IProductService
     {
-        private UstoraContext _context;
+        private readonly UstoraContext _context;
         
         public ProductService(UstoraContext context)
         {

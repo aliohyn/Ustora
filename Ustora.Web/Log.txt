@@ -1,0 +1,995 @@
+2019-01-31 12:35:22.841 +03:00 [Debug] Hosting starting
+2019-01-31 12:35:23.155 +03:00 [Information] User profile is available. Using '"C:\Users\alioh\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-01-31 12:35:23.183 +03:00 [Debug] Reading data from file '"C:\Users\alioh\AppData\Local\ASP.NET\DataProtection-Keys\key-21315d98-f17a-46bd-bbff-9993a419d3ed.xml"'.
+2019-01-31 12:35:23.265 +03:00 [Debug] Reading data from file '"C:\Users\alioh\AppData\Local\ASP.NET\DataProtection-Keys\key-a566b3d3-b9cc-4c94-bc5e-b091d48de6c9.xml"'.
+2019-01-31 12:35:23.274 +03:00 [Debug] Found key {21315d98-f17a-46bd-bbff-9993a419d3ed}.
+2019-01-31 12:35:23.281 +03:00 [Debug] Found key {a566b3d3-b9cc-4c94-bc5e-b091d48de6c9}.
+2019-01-31 12:35:23.290 +03:00 [Debug] Considering key {21315d98-f17a-46bd-bbff-9993a419d3ed} with expiration date 2019-03-27 18:04:39Z as default key.
+2019-01-31 12:35:23.365 +03:00 [Debug] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2019-01-31 12:35:23.368 +03:00 [Debug] Decrypting secret element using Windows DPAPI.
+2019-01-31 12:35:23.370 +03:00 [Debug] Forwarded activator type request from "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" to "Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+2019-01-31 12:35:23.378 +03:00 [Debug] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2019-01-31 12:35:23.384 +03:00 [Debug] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2019-01-31 12:35:23.394 +03:00 [Debug] Using key {21315d98-f17a-46bd-bbff-9993a419d3ed} as the default key.
+2019-01-31 12:35:23.396 +03:00 [Debug] Key ring with default key {21315d98-f17a-46bd-bbff-9993a419d3ed} was loaded during application startup.
+2019-01-31 12:35:23.825 +03:00 [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+2019-01-31 12:35:24.499 +03:00 [Debug] The property '"BrandId"' on entity type '"Product"' was created in shadow state because there are no eligible CLR members with a matching name.
+2019-01-31 12:35:24.499 +03:00 [Debug] The property '"SectionId"' on entity type '"Product"' was created in shadow state because there are no eligible CLR members with a matching name.
+2019-01-31 12:35:24.528 +03:00 [Warning] No type was specified for the decimal column '"OldPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2019-01-31 12:35:24.528 +03:00 [Warning] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2019-01-31 12:35:24.636 +03:00 [Information] Entity Framework Core "2.2.1-servicing-10028" initialized '"UstoraContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-01-31 12:35:24.729 +03:00 [Debug] Compiling query model: "
+"'"(from Product <generated>_1 in DbSet<Product>
+select [<generated>_1]).Any()"'
+2019-01-31 12:35:24.763 +03:00 [Debug] Optimized query model: "
+"'"(from Product <generated>_1 in DbSet<Product>
+select [<generated>_1]).Any()"'
+2019-01-31 12:35:24.889 +03:00 [Debug] "(QueryContext queryContext) => IAsyncEnumerable<bool> _InterceptExceptions(
+|__ source: IAsyncEnumerable<bool> _ToSequence(() => Task<bool> GetResult(
+|   |__ valueBuffers: IAsyncEnumerable<ValueBuffer> _Query(
+|   |   |__ queryContext: queryContext, 
+|   |   |__ shaperCommandContext: SelectExpression: 
+|   |           SELECT CASE
+|   |               WHEN EXISTS (
+|   |                   SELECT 1
+|   |                   FROM [Products] AS [p])
+|   |               THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+|   |           END), 
+|   |__ throwOnNullResult: False, 
+|   |__ cancellationToken: queryContext.CancellationToken)), 
+|__ contextType: Ustora.Data.UstoraContext, 
+|__ logger: DiagnosticsLogger<Query>, 
+|__ queryContext: queryContext)"
+2019-01-31 12:35:24.998 +03:00 [Debug] Opening connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:25.127 +03:00 [Information] Entity Framework Core "2.2.1-servicing-10028" initialized '"UstoraContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-01-31 12:35:25.128 +03:00 [Debug] Compiling query model: "
+"'"(from Slide <generated>_1 in DbSet<Slide>
+select [<generated>_1]).Any()"'
+2019-01-31 12:35:25.128 +03:00 [Debug] Optimized query model: "
+"'"(from Slide <generated>_1 in DbSet<Slide>
+select [<generated>_1]).Any()"'
+2019-01-31 12:35:25.130 +03:00 [Debug] "(QueryContext queryContext) => IAsyncEnumerable<bool> _InterceptExceptions(
+|__ source: IAsyncEnumerable<bool> _ToSequence(() => Task<bool> GetResult(
+|   |__ valueBuffers: IAsyncEnumerable<ValueBuffer> _Query(
+|   |   |__ queryContext: queryContext, 
+|   |   |__ shaperCommandContext: SelectExpression: 
+|   |           SELECT CASE
+|   |               WHEN EXISTS (
+|   |                   SELECT 1
+|   |                   FROM [Slides] AS [s])
+|   |               THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+|   |           END), 
+|   |__ throwOnNullResult: False, 
+|   |__ cancellationToken: queryContext.CancellationToken)), 
+|__ contextType: Ustora.Data.UstoraContext, 
+|__ logger: DiagnosticsLogger<Query>, 
+|__ queryContext: queryContext)"
+2019-01-31 12:35:25.131 +03:00 [Debug] Opening connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:25.169 +03:00 [Debug] Compatibility switch "AllowInputFormatterExceptionMessages" in type "MvcJsonOptions" is using compatibility value True for version Version_2_2
+2019-01-31 12:35:25.225 +03:00 [Debug] Compatibility switch "AllowCombiningAuthorizeFilters" in type "MvcOptions" is using compatibility value True for version Version_2_2
+2019-01-31 12:35:25.225 +03:00 [Debug] Compatibility switch "AllowBindingHeaderValuesToNonStringModelTypes" in type "MvcOptions" is using compatibility value True for version Version_2_2
+2019-01-31 12:35:25.225 +03:00 [Debug] Compatibility switch "AllowValidatingTopLevelNodes" in type "MvcOptions" is using compatibility value True for version Version_2_2
+2019-01-31 12:35:25.225 +03:00 [Debug] Compatibility switch "InputFormatterExceptionPolicy" in type "MvcOptions" is using compatibility value MalformedInputExceptions for version Version_2_2
+2019-01-31 12:35:25.225 +03:00 [Debug] Compatibility switch "SuppressBindingUndefinedValueToEnumType" in type "MvcOptions" is using compatibility value True for version Version_2_2
+2019-01-31 12:35:25.225 +03:00 [Debug] Compatibility switch "EnableEndpointRouting" in type "MvcOptions" is using compatibility value True for version Version_2_2
+2019-01-31 12:35:25.226 +03:00 [Debug] Compatibility switch "MaxValidationDepth" in type "MvcOptions" is using compatibility value 32 for version Version_2_2
+2019-01-31 12:35:25.226 +03:00 [Debug] Compatibility switch "AllowShortCircuitingValidationWhenNoValidatorsArePresent" in type "MvcOptions" is using compatibility value True for version Version_2_2
+2019-01-31 12:35:25.407 +03:00 [Debug] Compatibility switch "SuppressMapClientErrors" in type "ApiBehaviorOptions" is using default value False
+2019-01-31 12:35:25.407 +03:00 [Debug] Compatibility switch "SuppressUseValidationProblemDetailsForInvalidModelStateResponses" in type "ApiBehaviorOptions" is using default value False
+2019-01-31 12:35:25.407 +03:00 [Debug] Compatibility switch "AllowInferringBindingSourceForCollectionTypesAsFromQuery" in type "ApiBehaviorOptions" is using default value False
+2019-01-31 12:35:25.416 +03:00 [Debug] Compatibility switch "AllowAreas" in type "RazorPagesOptions" is using compatibility value True for version Version_2_2
+2019-01-31 12:35:25.416 +03:00 [Debug] Compatibility switch "AllowMappingHeadRequestsToGetHandler" in type "RazorPagesOptions" is using compatibility value True for version Version_2_2
+2019-01-31 12:35:25.416 +03:00 [Debug] Compatibility switch "AllowDefaultHandlingForOptionsRequests" in type "RazorPagesOptions" is using compatibility value True for version Version_2_2
+2019-01-31 12:35:25.430 +03:00 [Debug] Compatibility switch "AllowRecompilingViewsOnFileChange" in type "RazorViewEngineOptions" is using explicitly configured value True
+2019-01-31 12:35:25.481 +03:00 [Debug] Compatibility switch "SuppressTempDataAttributePrefix" in type "MvcViewOptions" is using compatibility value True for version Version_2_2
+2019-01-31 12:35:25.482 +03:00 [Debug] Compatibility switch "AllowRenderingMaxLengthAttribute" in type "MvcViewOptions" is using compatibility value True for version Version_2_2
+2019-01-31 12:35:25.543 +03:00 [Debug] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2019-01-31 12:35:26.066 +03:00 [Debug] Failed to locate the development https certificate at 'null'.
+2019-01-31 12:35:26.221 +03:00 [Debug] Using development certificate: "CN=localhost" (Thumbprint: "0F85CDA303126FE4A6B184232A67BEB6A1276063")
+2019-01-31 12:35:26.299 +03:00 [Debug] Opened connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:26.299 +03:00 [Debug] Opened connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:26.336 +03:00 [Debug] Hosting started
+2019-01-31 12:35:26.336 +03:00 [Debug] Loaded hosting startup assembly "Ustora.Web"
+2019-01-31 12:35:26.372 +03:00 [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END"
+2019-01-31 12:35:26.372 +03:00 [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Slides] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END"
+2019-01-31 12:35:26.483 +03:00 [Information] Executed DbCommand ("112"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END"
+2019-01-31 12:35:26.483 +03:00 [Information] Executed DbCommand ("112"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Slides] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END"
+2019-01-31 12:35:26.525 +03:00 [Debug] A data reader was disposed.
+2019-01-31 12:35:26.525 +03:00 [Debug] A data reader was disposed.
+2019-01-31 12:35:26.528 +03:00 [Debug] Closing connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:26.528 +03:00 [Debug] Closing connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:26.537 +03:00 [Debug] Closed connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:26.537 +03:00 [Debug] Closed connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:26.542 +03:00 [Debug] '"UstoraContext"' disposed.
+2019-01-31 12:35:26.542 +03:00 [Debug] '"UstoraContext"' disposed.
+2019-01-31 12:35:26.770 +03:00 [Debug] Connection id ""0HLK7BTNAEMHQ"" started.
+2019-01-31 12:35:26.834 +03:00 [Debug] Connection id ""0HLK7BTNAEMHQ"" received FIN.
+2019-01-31 12:35:26.880 +03:00 [Debug] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2019-01-31 12:35:27.060 +03:00 [Debug] Connection id ""0HLK7BTNAEMHQ"" sending FIN because: ""The client closed the connection.""
+2019-01-31 12:35:27.064 +03:00 [Debug] Connection id ""0HLK7BTNAEMHQ"" disconnecting.
+2019-01-31 12:35:27.083 +03:00 [Debug] Connection id ""0HLK7BTNAEMHQ"" stopped.
+2019-01-31 12:35:27.200 +03:00 [Debug] Connection id ""0HLK7BTNAEMHR"" started.
+2019-01-31 12:35:27.235 +03:00 [Debug] Connection id ""0HLK7BTNAEMHS"" started.
+2019-01-31 12:35:27.397 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/  
+2019-01-31 12:35:27.409 +03:00 [Debug] Wildcard detected, all requests with hosts will be allowed.
+2019-01-31 12:35:27.437 +03:00 [Debug] The request path "/" does not match a supported file type
+2019-01-31 12:35:27.573 +03:00 [Debug] 1 candidate(s) found for the request path '"/"'
+2019-01-31 12:35:27.578 +03:00 [Debug] Endpoint '"Ustora.Web.Controllers.HomeController.Index (Ustora.Web)"' with route pattern '""' is valid for the request path '"/"'
+2019-01-31 12:35:27.579 +03:00 [Debug] Request matched endpoint '"Ustora.Web.Controllers.HomeController.Index (Ustora.Web)"'
+2019-01-31 12:35:27.582 +03:00 [Information] Executing endpoint '"Ustora.Web.Controllers.HomeController.Index (Ustora.Web)"'
+2019-01-31 12:35:27.640 +03:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "Ustora.Web.Controllers.HomeController.Index (Ustora.Web)"
+2019-01-31 12:35:27.642 +03:00 [Debug] Execution plan of "authorization" filters (in the following order): ["None"]
+2019-01-31 12:35:27.643 +03:00 [Debug] Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2019-01-31 12:35:27.645 +03:00 [Debug] Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648)", "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2019-01-31 12:35:27.645 +03:00 [Debug] Execution plan of "exception" filters (in the following order): ["None"]
+2019-01-31 12:35:27.647 +03:00 [Debug] Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter"]
+2019-01-31 12:35:27.691 +03:00 [Information] Executing action method "Ustora.Web.Controllers.HomeController.Index (Ustora.Web)" - Validation state: Valid
+2019-01-31 12:35:39.584 +03:00 [Debug] Connection id ""0HLK7BTNAEMHR"" received FIN.
+2019-01-31 12:35:39.586 +03:00 [Warning] Log: Log.Warning
+2019-01-31 12:35:39.587 +03:00 [Debug] Connection id ""0HLK7BTNAEMHR"" sending FIN because: ""The client closed the connection.""
+2019-01-31 12:35:39.587 +03:00 [Debug] Connection id ""0HLK7BTNAEMHR"" disconnecting.
+2019-01-31 12:35:45.147 +03:00 [Error] Log: Log.Warning
+2019-01-31 12:35:51.717 +03:00 [Information] Entity Framework Core "2.2.1-servicing-10028" initialized '"UstoraContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-01-31 12:35:51.720 +03:00 [Debug] Connection id ""0HLK7BTNAEMHR"" stopped.
+2019-01-31 12:35:51.722 +03:00 [Debug] Compiling query model: "
+"'"from Slide <generated>_0 in DbSet<Slide>
+select [<generated>_0]"'
+2019-01-31 12:35:51.725 +03:00 [Debug] Optimized query model: "
+"'"from Slide <generated>_0 in DbSet<Slide>
+select [<generated>_0]"'
+2019-01-31 12:35:51.755 +03:00 [Debug] "(QueryContext queryContext) => IEnumerable<Slide> _InterceptExceptions(
+|__ source: IEnumerable<Slide> _TrackEntities(
+|   |__ results: IEnumerable<Slide> _ShapedQuery(
+|   |   |__ queryContext: queryContext, 
+|   |   |__ shaperCommandContext: SelectExpression: 
+|   |   |       SELECT [s].[SlideId], [s].[Description], [s].[ImagePath], [s].[Link], [s].[Name]
+|   |   |       FROM [Slides] AS [s], 
+|   |   |__ shaper: (MaterializationContext materializationContext) => 
+|   |       {
+|   |           instance = new Slide()
+|   |           instance.<SlideId>k__BackingField = int TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 0, Slide.SlideId)
+|   |           instance.<Description>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 1, Slide.Description)
+|   |           instance.<ImagePath>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 2, Slide.ImagePath)
+|   |           instance.<Link>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 3, Slide.Link)
+|   |           instance.<Name>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 4, Slide.Name)
+|   |           return instance
+|   |       }), 
+|   |__ queryContext: queryContext, 
+|   |__ entityTrackingInfos: { itemType: Slide }, 
+|   |__ entityAccessors: List<Func<Slide, object>> 
+|       { 
+|           Func<Slide, Slide>, 
+|       }), 
+|__ contextType: Ustora.Data.UstoraContext, 
+|__ logger: DiagnosticsLogger<Query>, 
+|__ queryContext: queryContext)"
+2019-01-31 12:35:51.762 +03:00 [Debug] Opening connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:51.764 +03:00 [Debug] Opened connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:51.766 +03:00 [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[SlideId], [s].[Description], [s].[ImagePath], [s].[Link], [s].[Name]
+FROM [Slides] AS [s]"
+2019-01-31 12:35:51.771 +03:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[SlideId], [s].[Description], [s].[ImagePath], [s].[Link], [s].[Name]
+FROM [Slides] AS [s]"
+2019-01-31 12:35:51.819 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Slide"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:51.840 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Slide"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:51.840 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Slide"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:51.840 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Slide"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:51.841 +03:00 [Debug] A data reader was disposed.
+2019-01-31 12:35:51.841 +03:00 [Debug] Closing connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:51.841 +03:00 [Debug] Closed connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:51.842 +03:00 [Debug] Compiling query model: "
+"'"from Brand <generated>_0 in DbSet<Brand>
+select [<generated>_0]"'
+2019-01-31 12:35:51.842 +03:00 [Debug] Optimized query model: "
+"'"from Brand <generated>_0 in DbSet<Brand>
+select [<generated>_0]"'
+2019-01-31 12:35:51.845 +03:00 [Debug] "(QueryContext queryContext) => IEnumerable<Brand> _InterceptExceptions(
+|__ source: IEnumerable<Brand> _TrackEntities(
+|   |__ results: IEnumerable<Brand> _ShapedQuery(
+|   |   |__ queryContext: queryContext, 
+|   |   |__ shaperCommandContext: SelectExpression: 
+|   |   |       SELECT [b].[BrandId], [b].[ImagePath], [b].[Name]
+|   |   |       FROM [Brands] AS [b], 
+|   |   |__ shaper: (MaterializationContext materializationContext) => 
+|   |       {
+|   |           instance = new Brand()
+|   |           instance.<BrandId>k__BackingField = int TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 0, Brand.BrandId)
+|   |           instance.<ImagePath>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 1, Brand.ImagePath)
+|   |           instance.<Name>k__BackingField = string TryReadValue(ValueBuffer materializationContext.get_ValueBuffer(), 2, Brand.Name)
+|   |           return instance
+|   |       }), 
+|   |__ queryContext: queryContext, 
+|   |__ entityTrackingInfos: { itemType: Brand }, 
+|   |__ entityAccessors: List<Func<Brand, object>> 
+|       { 
+|           Func<Brand, Brand>, 
+|       }), 
+|__ contextType: Ustora.Data.UstoraContext, 
+|__ logger: DiagnosticsLogger<Query>, 
+|__ queryContext: queryContext)"
+2019-01-31 12:35:51.845 +03:00 [Debug] Opening connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:51.845 +03:00 [Debug] Opened connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:51.846 +03:00 [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[BrandId], [b].[ImagePath], [b].[Name]
+FROM [Brands] AS [b]"
+2019-01-31 12:35:51.847 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[BrandId], [b].[ImagePath], [b].[Name]
+FROM [Brands] AS [b]"
+2019-01-31 12:35:51.862 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Brand"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:51.869 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Brand"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:51.869 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Brand"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:51.869 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Brand"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:51.869 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Brand"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:51.869 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Brand"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:51.869 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Brand"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:51.869 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Brand"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:51.869 +03:00 [Debug] A data reader was disposed.
+2019-01-31 12:35:51.869 +03:00 [Debug] Closing connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:51.869 +03:00 [Debug] Closed connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:51.880 +03:00 [Debug] Compiling query model: "
+"'"(from Product <generated>_1 in DbSet<Product>
+select [<generated>_1]).Take(__p_0)"'
+2019-01-31 12:35:51.882 +03:00 [Warning] Query: '"(from Product <generated>_1 in DbSet<Product> select [<generated>_1]).Take(__p_0)"' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-01-31 12:35:51.882 +03:00 [Debug] Optimized query model: "
+"'"(from Product <generated>_1 in DbSet<Product>
+select [<generated>_1]).Take(__p_0)"'
+2019-01-31 12:35:51.893 +03:00 [Debug] "(QueryContext queryContext) => IEnumerable<Product> _InterceptExceptions(
+|__ source: IEnumerable<Product> _TrackEntities(
+|   |__ results: IEnumerable<Product> _ShapedQuery(
+|   |   |__ queryContext: queryContext, 
+|   |   |__ shaperCommandContext: SelectExpression: 
+|   |   |       SELECT TOP(@__p_0) [p].[ProductId], [p].[BrandId], [p].[DateCreate], [p].[DateUpdate], [p].[Description], [p].[ImagePath], [p].[MainSliderShow], [p].[Name], [p].[OldPrice], [p].[Price], [p].[SectionId], [p].[TopSellerShow]
+|   |   |       FROM [Products] AS [p], 
+|   |   |__ shaper: BufferedEntityShaper<Product>), 
+|   |__ queryContext: queryContext, 
+|   |__ entityTrackingInfos: { itemType: Product }, 
+|   |__ entityAccessors: List<Func<Product, object>> 
+|       { 
+|           Func<Product, Product>, 
+|       }), 
+|__ contextType: Ustora.Data.UstoraContext, 
+|__ logger: DiagnosticsLogger<Query>, 
+|__ queryContext: queryContext)"
+2019-01-31 12:35:51.893 +03:00 [Debug] Opening connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:51.893 +03:00 [Debug] Opened connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:51.906 +03:00 [Debug] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(@__p_0) [p].[ProductId], [p].[BrandId], [p].[DateCreate], [p].[DateUpdate], [p].[Description], [p].[ImagePath], [p].[MainSliderShow], [p].[Name], [p].[OldPrice], [p].[Price], [p].[SectionId], [p].[TopSellerShow]
+FROM [Products] AS [p]"
+2019-01-31 12:35:51.952 +03:00 [Information] Executed DbCommand ("53"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(@__p_0) [p].[ProductId], [p].[BrandId], [p].[DateCreate], [p].[DateUpdate], [p].[Description], [p].[ImagePath], [p].[MainSliderShow], [p].[Name], [p].[OldPrice], [p].[Price], [p].[SectionId], [p].[TopSellerShow]
+FROM [Products] AS [p]"
+2019-01-31 12:35:51.973 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:52.003 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:52.004 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:52.004 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:52.004 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:52.004 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:52.004 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:52.004 +03:00 [Debug] Context '"UstoraContext"' started tracking '"Product"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2019-01-31 12:35:52.006 +03:00 [Debug] A data reader was disposed.
+2019-01-31 12:35:52.006 +03:00 [Debug] Closing connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:52.006 +03:00 [Debug] Closed connection to database '"UstoraDb"' on server '"(localdb)\mssqllocaldb"'.
+2019-01-31 12:35:52.013 +03:00 [Information] Executed action method "Ustora.Web.Controllers.HomeController.Index (Ustora.Web)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 24320.3251ms.
+2019-01-31 12:35:52.039 +03:00 [Debug] View lookup cache miss for view '"Index"' in controller '"Home"'.
+2019-01-31 12:35:52.047 +03:00 [Debug] Initializing Razor view compiler with no compiled views.
+2019-01-31 12:35:53.550 +03:00 [Debug] Compilation of the generated code for the Razor file at '"C:\!projects\Ustora\Ustora.Web\Views\Home\Index.cshtml"' started.
+2019-01-31 12:35:56.426 +03:00 [Debug] Compilation of the generated code for the Razor file at '"C:\!projects\Ustora\Ustora.Web\Views\Home\Index.cshtml"' completed in 2873.575ms.
+2019-01-31 12:35:56.503 +03:00 [Debug] Compilation of the generated code for the Razor file at '"C:\!projects\Ustora\Ustora.Web\Views\_ViewStart.cshtml"' started.
+2019-01-31 12:35:56.584 +03:00 [Debug] Compilation of the generated code for the Razor file at '"C:\!projects\Ustora\Ustora.Web\Views\_ViewStart.cshtml"' completed in 80.4018ms.
+2019-01-31 12:35:56.586 +03:00 [Debug] Using precompiled view for '"/Views/Home/Index.cshtml"'.
+2019-01-31 12:35:56.598 +03:00 [Information] Executing ViewResult, running view "Index".
+2019-01-31 12:35:56.599 +03:00 [Debug] The view path '"/Views/Home/Index.cshtml"' was found in 4566.6899ms.
+2019-01-31 12:35:56.699 +03:00 [Debug] View lookup cache miss for view '"_Layout"' in controller '"Home"'.
+2019-01-31 12:35:56.820 +03:00 [Debug] Compilation of the generated code for the Razor file at '"C:\!projects\Ustora\Ustora.Web\Views\Shared\_Layout.cshtml"' started.
+2019-01-31 12:35:57.326 +03:00 [Debug] Compilation of the generated code for the Razor file at '"C:\!projects\Ustora\Ustora.Web\Views\Shared\_Layout.cshtml"' completed in 505.3739ms.
+2019-01-31 12:35:57.326 +03:00 [Debug] Using precompiled view for '"/Views/Shared/_Layout.cshtml"'.
+2019-01-31 12:35:57.429 +03:00 [Debug] Executing view component "Ustora.Web.Components.CartLineViewComponent" with arguments ([]).
+2019-01-31 12:35:57.520 +03:00 [Debug] Executed view component "Ustora.Web.Components.CartLineViewComponent" in 87.0312ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2019-01-31 12:35:57.524 +03:00 [Debug] View lookup cache miss for view '"Components/CartLine/Default"' in controller '"Home"'.
+2019-01-31 12:35:57.591 +03:00 [Debug] Compilation of the generated code for the Razor file at '"C:\!projects\Ustora\Ustora.Web\Views\Shared\Components\CartLine\Default.cshtml"' started.
+2019-01-31 12:35:57.633 +03:00 [Debug] Compilation of the generated code for the Razor file at '"C:\!projects\Ustora\Ustora.Web\Views\Shared\Components\CartLine\Default.cshtml"' completed in 42.2486ms.
+2019-01-31 12:35:57.634 +03:00 [Debug] Using precompiled view for '"/Views/Shared/Components/CartLine/Default.cshtml"'.
+2019-01-31 12:35:57.745 +03:00 [Information] Executed ViewResult - view "Index" executed in 5715.4246ms.
+2019-01-31 12:35:57.749 +03:00 [Information] Executed action "Ustora.Web.Controllers.HomeController.Index (Ustora.Web)" in 30101.2966ms
+2019-01-31 12:35:57.750 +03:00 [Information] Executed endpoint '"Ustora.Web.Controllers.HomeController.Index (Ustora.Web)"'
+2019-01-31 12:35:57.765 +03:00 [Debug] Connection id ""0HLK7BTNAEMHS"" completed keep alive response.
+2019-01-31 12:35:57.783 +03:00 [Debug] '"UstoraContext"' disposed.
+2019-01-31 12:35:57.788 +03:00 [Information] Request finished in 30396.6641ms 200 text/html; charset=utf-8
+2019-01-31 12:35:57.834 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/css/fonts.css  
+2019-01-31 12:35:57.835 +03:00 [Debug] Connection id ""0HLK7BTNAEMHT"" started.
+2019-01-31 12:35:57.836 +03:00 [Debug] Connection id ""0HLK7BTNAEMHU"" started.
+2019-01-31 12:35:57.838 +03:00 [Debug] Connection id ""0HLK7BTNAEMHV"" started.
+2019-01-31 12:35:57.839 +03:00 [Debug] Connection id ""0HLK7BTNAEMI0"" started.
+2019-01-31 12:35:57.840 +03:00 [Debug] Connection id ""0HLK7BTNAEMI1"" started.
+2019-01-31 12:35:57.855 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/css/font-awesome.min.css  
+2019-01-31 12:35:57.864 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/css/owl.carousel.css  
+2019-01-31 12:35:57.864 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/css/style.css  
+2019-01-31 12:35:57.865 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/css/bootstrap.min.css  
+2019-01-31 12:35:57.885 +03:00 [Information] Sending file. Request path: '"/css/font-awesome.min.css"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\css\font-awesome.min.css"'
+2019-01-31 12:35:57.885 +03:00 [Information] Sending file. Request path: '"/css/style.css"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\css\style.css"'
+2019-01-31 12:35:57.885 +03:00 [Debug] Connection id ""0HLK7BTNAEMHU"" completed keep alive response.
+2019-01-31 12:35:57.885 +03:00 [Debug] Connection id ""0HLK7BTNAEMI0"" completed keep alive response.
+2019-01-31 12:35:57.885 +03:00 [Information] Request finished in 29.4282ms 200 text/css
+2019-01-31 12:35:57.885 +03:00 [Information] Request finished in 20.3476ms 200 text/css
+2019-01-31 12:35:57.885 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/css/responsive.css  
+2019-01-31 12:35:57.893 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/js/bootstrap.min.js  
+2019-01-31 12:35:57.893 +03:00 [Information] Sending file. Request path: '"/css/fonts.css"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\css\fonts.css"'
+2019-01-31 12:35:57.894 +03:00 [Information] Sending file. Request path: '"/css/owl.carousel.css"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\css\owl.carousel.css"'
+2019-01-31 12:35:57.896 +03:00 [Information] Sending file. Request path: '"/css/responsive.css"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\css\responsive.css"'
+2019-01-31 12:35:57.896 +03:00 [Debug] Connection id ""0HLK7BTNAEMHS"" completed keep alive response.
+2019-01-31 12:35:57.896 +03:00 [Debug] Connection id ""0HLK7BTNAEMI1"" completed keep alive response.
+2019-01-31 12:35:57.896 +03:00 [Information] Request finished in 62.3309ms 200 text/css
+2019-01-31 12:35:57.896 +03:00 [Debug] Connection id ""0HLK7BTNAEMHV"" completed keep alive response.
+2019-01-31 12:35:57.896 +03:00 [Information] Request finished in 11.5682ms 200 text/css
+2019-01-31 12:35:57.896 +03:00 [Information] Request finished in 32.0943ms 200 text/css
+2019-01-31 12:35:57.897 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/js/owl.carousel.min.js  
+2019-01-31 12:35:57.901 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/js/jquery.sticky.js  
+2019-01-31 12:35:57.915 +03:00 [Information] Sending file. Request path: '"/js/jquery.sticky.js"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\js\jquery.sticky.js"'
+2019-01-31 12:35:57.915 +03:00 [Debug] Connection id ""0HLK7BTNAEMHS"" completed keep alive response.
+2019-01-31 12:35:57.915 +03:00 [Information] Request finished in 14.7353ms 200 application/javascript
+2019-01-31 12:35:57.915 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/js/jquery.easing.1.3.min.js  
+2019-01-31 12:35:57.927 +03:00 [Information] Sending file. Request path: '"/js/owl.carousel.min.js"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\js\owl.carousel.min.js"'
+2019-01-31 12:35:57.927 +03:00 [Debug] Connection id ""0HLK7BTNAEMHU"" completed keep alive response.
+2019-01-31 12:35:57.927 +03:00 [Information] Request finished in 30.3653ms 200 application/javascript
+2019-01-31 12:35:57.927 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/js/main.js  
+2019-01-31 12:35:57.928 +03:00 [Information] Sending file. Request path: '"/js/jquery.easing.1.3.min.js"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\js\jquery.easing.1.3.min.js"'
+2019-01-31 12:35:57.928 +03:00 [Debug] Connection id ""0HLK7BTNAEMHV"" completed keep alive response.
+2019-01-31 12:35:57.928 +03:00 [Information] Request finished in 12.8242ms 200 application/javascript
+2019-01-31 12:35:57.928 +03:00 [Information] Sending file. Request path: '"/js/bootstrap.min.js"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\js\bootstrap.min.js"'
+2019-01-31 12:35:57.928 +03:00 [Debug] Connection id ""0HLK7BTNAEMI0"" completed keep alive response.
+2019-01-31 12:35:57.928 +03:00 [Information] Request finished in 35.8583ms 200 application/javascript
+2019-01-31 12:35:57.936 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/js/bxslider.min.js  
+2019-01-31 12:35:57.938 +03:00 [Information] Sending file. Request path: '"/js/main.js"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\js\main.js"'
+2019-01-31 12:35:57.938 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/js/script.slider.js  
+2019-01-31 12:35:57.938 +03:00 [Debug] Connection id ""0HLK7BTNAEMI1"" completed keep alive response.
+2019-01-31 12:35:57.938 +03:00 [Information] Request finished in 11.2563ms 200 application/javascript
+2019-01-31 12:35:57.947 +03:00 [Information] Sending file. Request path: '"/css/bootstrap.min.css"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\css\bootstrap.min.css"'
+2019-01-31 12:35:57.947 +03:00 [Debug] Connection id ""0HLK7BTNAEMHT"" completed keep alive response.
+2019-01-31 12:35:57.947 +03:00 [Information] Request finished in 82.6014ms 200 text/css
+2019-01-31 12:35:57.951 +03:00 [Information] Sending file. Request path: '"/js/script.slider.js"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\js\script.slider.js"'
+2019-01-31 12:35:57.951 +03:00 [Debug] Connection id ""0HLK7BTNAEMI0"" completed keep alive response.
+2019-01-31 12:35:57.951 +03:00 [Information] Request finished in 12.6843ms 200 application/javascript
+2019-01-31 12:35:57.955 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/img/logo.png  
+2019-01-31 12:35:57.955 +03:00 [Information] Sending file. Request path: '"/js/bxslider.min.js"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\js\bxslider.min.js"'
+2019-01-31 12:35:57.955 +03:00 [Debug] Connection id ""0HLK7BTNAEMHS"" completed keep alive response.
+2019-01-31 12:35:57.955 +03:00 [Information] Request finished in 19.2256ms 200 application/javascript
+2019-01-31 12:35:57.955 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/img/h4-slide2.png  
+2019-01-31 12:35:57.956 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/img/h4-slide3.png  
+2019-01-31 12:35:57.963 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/img/h4-slide.png  
+2019-01-31 12:35:57.964 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/img/h4-slide4.png  
+2019-01-31 12:35:57.980 +03:00 [Information] Sending file. Request path: '"/img/h4-slide2.png"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\img\h4-slide2.png"'
+2019-01-31 12:35:57.980 +03:00 [Information] Sending file. Request path: '"/img/h4-slide3.png"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\img\h4-slide3.png"'
+2019-01-31 12:35:57.980 +03:00 [Debug] Connection id ""0HLK7BTNAEMI1"" completed keep alive response.
+2019-01-31 12:35:57.980 +03:00 [Debug] Connection id ""0HLK7BTNAEMHT"" completed keep alive response.
+2019-01-31 12:35:57.980 +03:00 [Information] Request finished in 24.931ms 200 image/png
+2019-01-31 12:35:57.980 +03:00 [Information] Request finished in 24.6712ms 200 image/png
+2019-01-31 12:35:57.985 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/img/product-2.jpg  
+2019-01-31 12:35:57.986 +03:00 [Information] Sending file. Request path: '"/img/h4-slide.png"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\img\h4-slide.png"'
+2019-01-31 12:35:57.991 +03:00 [Debug] Connection id ""0HLK7BTNAEMHV"" completed keep alive response.
+2019-01-31 12:35:57.991 +03:00 [Information] Request finished in 28.1736ms 200 image/png
+2019-01-31 12:35:57.991 +03:00 [Information] Sending file. Request path: '"/img/product-2.jpg"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\img\product-2.jpg"'
+2019-01-31 12:35:57.991 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/fonts/fontawesome-webfont.woff?v=4.2.0  
+2019-01-31 12:35:57.991 +03:00 [Debug] Connection id ""0HLK7BTNAEMHS"" completed keep alive response.
+2019-01-31 12:35:57.991 +03:00 [Information] Request finished in 6.0275ms 200 image/jpeg
+2019-01-31 12:35:57.992 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/img/product-3.jpg  
+2019-01-31 12:35:57.991 +03:00 [Information] Sending file. Request path: '"/img/h4-slide4.png"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\img\h4-slide4.png"'
+2019-01-31 12:35:57.992 +03:00 [Debug] Connection id ""0HLK7BTNAEMI0"" completed keep alive response.
+2019-01-31 12:35:57.992 +03:00 [Information] Request finished in 27.9776ms 200 image/png
+2019-01-31 12:35:57.995 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/img/product-1.jpg  
+2019-01-31 12:35:58.004 +03:00 [Information] Sending file. Request path: '"/img/product-1.jpg"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\img\product-1.jpg"'
+2019-01-31 12:35:58.005 +03:00 [Debug] Connection id ""0HLK7BTNAEMI0"" completed keep alive response.
+2019-01-31 12:35:58.005 +03:00 [Information] Request finished in 10.28ms 200 image/jpeg
+2019-01-31 12:35:58.005 +03:00 [Information] Sending file. Request path: '"/img/product-3.jpg"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\img\product-3.jpg"'
+2019-01-31 12:35:58.005 +03:00 [Debug] Connection id ""0HLK7BTNAEMI1"" completed keep alive response.
+2019-01-31 12:35:58.005 +03:00 [Information] Request finished in 13.0544ms 200 image/jpeg
+2019-01-31 12:35:58.010 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/img/brand2.png  
+2019-01-31 12:35:58.010 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/img/brand1.png  
+2019-01-31 12:35:58.012 +03:00 [Information] Sending file. Request path: '"/fonts/fontawesome-webfont.woff"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\fonts\fontawesome-webfont.woff"'
+2019-01-31 12:35:58.012 +03:00 [Debug] Connection id ""0HLK7BTNAEMHT"" completed keep alive response.
+2019-01-31 12:35:58.012 +03:00 [Information] Request finished in 21.5876ms 200 application/font-woff
+2019-01-31 12:35:58.013 +03:00 [Information] Sending file. Request path: '"/img/logo.png"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\img\logo.png"'
+2019-01-31 12:35:58.013 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/img/brand3.png  
+2019-01-31 12:35:58.013 +03:00 [Debug] Connection id ""0HLK7BTNAEMHU"" completed keep alive response.
+2019-01-31 12:35:58.014 +03:00 [Information] Sending file. Request path: '"/img/brand2.png"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\img\brand2.png"'
+2019-01-31 12:35:58.014 +03:00 [Debug] Connection id ""0HLK7BTNAEMI0"" completed keep alive response.
+2019-01-31 12:35:58.014 +03:00 [Information] Request finished in 3.7209ms 200 image/png
+2019-01-31 12:35:58.017 +03:00 [Information] Sending file. Request path: '"/img/brand1.png"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\img\brand1.png"'
+2019-01-31 12:35:58.017 +03:00 [Debug] Connection id ""0HLK7BTNAEMI1"" completed keep alive response.
+2019-01-31 12:35:58.017 +03:00 [Information] Request finished in 6.4304ms 200 image/png
+2019-01-31 12:35:58.017 +03:00 [Information] Request finished in 57.8871ms 200 image/png
+2019-01-31 12:35:58.020 +03:00 [Information] Sending file. Request path: '"/img/brand3.png"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\img\brand3.png"'
+2019-01-31 12:35:58.020 +03:00 [Debug] Connection id ""0HLK7BTNAEMHV"" completed keep alive response.
+2019-01-31 12:35:58.021 +03:00 [Information] Request finished in 7.4988ms 200 image/png
+2019-01-31 12:35:58.126 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/favicon.ico  
+2019-01-31 12:35:58.131 +03:00 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\!projects\Ustora\Ustora.Web\wwwroot\favicon.ico"'
+2019-01-31 12:35:58.131 +03:00 [Debug] Connection id ""0HLK7BTNAEMI1"" completed keep alive response.
+2019-01-31 12:35:58.131 +03:00 [Information] Request finished in 5.9207ms 200 image/x-icon
+2019-01-31 12:35:59.810 +03:00 [Debug] Hosting shutdown
+2019-01-31 12:35:59.841 +03:00 [Debug] Connection id ""0HLK7BTNAEMHS"" disconnecting.
+2019-01-31 12:35:59.841 +03:00 [Debug] Connection id ""0HLK7BTNAEMHT"" disconnecting.
+2019-01-31 12:35:59.841 +03:00 [Debug] Connection id ""0HLK7BTNAEMHU"" disconnecting.
+2019-01-31 12:35:59.841 +03:00 [Debug] Connection id ""0HLK7BTNAEMI0"" disconnecting.
+2019-01-31 12:35:59.841 +03:00 [Debug] Connection id ""0HLK7BTNAEMI1"" disconnecting.
+2019-01-31 12:35:59.841 +03:00 [Debug] Connection id ""0HLK7BTNAEMHT"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2019-01-31 12:35:59.841 +03:00 [Debug] Connection id ""0HLK7BTNAEMHS"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2019-01-31 12:35:59.841 +03:00 [Debug] Connection id ""0HLK7BTNAEMHU"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2019-01-31 12:35:59.842 +03:00 [Debug] Connection id ""0HLK7BTNAEMI1"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2019-01-31 12:35:59.842 +03:00 [Debug] Connection id ""0HLK7BTNAEMI0"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2019-01-31 12:35:59.842 +03:00 [Debug] Connection id ""0HLK7BTNAEMHV"" disconnecting.
+2019-01-31 12:35:59.843 +03:00 [Debug] Connection id ""0HLK7BTNAEMHV"" sending FIN because: ""The Socket transport's send loop completed gracefully.""
+2019-01-31 12:35:59.874 +03:00 [Debug] Connection id ""0HLK7BTNAEMHV"" stopped.
+2019-01-31 12:35:59.877 +03:00 [Debug] Connection id ""0HLK7BTNAEMI0"" stopped.
+2019-01-31 12:35:59.877 +03:00 [Debug] Connection id ""0HLK7BTNAEMHT"" stopped.
+2019-01-31 12:35:59.877 +03:00 [Debug] Connection id ""0HLK7BTNAEMHU"" stopped.
+2019-01-31 12:35:59.885 +03:00 [Debug] Connection id ""0HLK7BTNAEMHS"" stopped.
+2019-01-31 12:35:59.885 +03:00 [Debug] Connection id ""0HLK7BTNAEMI1"" stopped.
+2019-01-31 12:46:40.853 +03:00 [Information] User profile is available. Using '"C:\Users\alioh\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-01-31 12:46:42.120 +03:00 [Warning] No type was specified for the decimal column '"OldPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2019-01-31 12:46:42.120 +03:00 [Warning] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2019-01-31 12:46:42.222 +03:00 [Information] Entity Framework Core "2.2.1-servicing-10028" initialized '"UstoraContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-01-31 12:46:42.639 +03:00 [Information] Entity Framework Core "2.2.1-servicing-10028" initialized '"UstoraContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-01-31 12:46:44.676 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/  
+2019-01-31 12:46:44.827 +03:00 [Information] Executing endpoint '"Ustora.Web.Controllers.HomeController.Index (Ustora.Web)"'
+2019-01-31 12:46:44.888 +03:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "Ustora.Web.Controllers.HomeController.Index (Ustora.Web)"
+2019-01-31 12:46:44.925 +03:00 [Information] Executing action method "Ustora.Web.Controllers.HomeController.Index (Ustora.Web)" - Validation state: Valid
+2019-01-31 12:46:44.929 +03:00 [Information] Log: 573876562
+2019-01-31 12:46:44.929 +03:00 [Information] Entity Framework Core "2.2.1-servicing-10028" initialized '"UstoraContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-01-31 12:46:48.297 +03:00 [Information] Executed DbCommand ("73"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END"
+2019-01-31 12:46:48.297 +03:00 [Information] Executed DbCommand ("73"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Slides] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END"
+2019-01-31 12:46:48.297 +03:00 [Information] Executed DbCommand ("71"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[SlideId], [s].[Description], [s].[ImagePath], [s].[Link], [s].[Name]
+FROM [Slides] AS [s]"
+2019-01-31 12:46:48.394 +03:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[BrandId], [b].[ImagePath], [b].[Name]
+FROM [Brands] AS [b]"
+2019-01-31 12:46:48.474 +03:00 [Warning] Query: '"(from Product <generated>_1 in DbSet<Product> select [<generated>_1]).Take(__p_0)"' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-01-31 12:46:48.538 +03:00 [Information] Executed DbCommand ("41"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(@__p_0) [p].[ProductId], [p].[BrandId], [p].[DateCreate], [p].[DateUpdate], [p].[Description], [p].[ImagePath], [p].[MainSliderShow], [p].[Name], [p].[OldPrice], [p].[Price], [p].[SectionId], [p].[TopSellerShow]
+FROM [Products] AS [p]"
+2019-01-31 12:46:48.589 +03:00 [Information] Log: 573880234
+2019-01-31 12:46:48.595 +03:00 [Information] Executed action method "Ustora.Web.Controllers.HomeController.Index (Ustora.Web)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 3667.3859ms.
+2019-01-31 12:46:52.859 +03:00 [Information] Executing ViewResult, running view "Index".
+2019-01-31 12:46:53.930 +03:00 [Information] Executed ViewResult - view "Index" executed in 5317.5419ms.
+2019-01-31 12:46:53.935 +03:00 [Information] Executed action "Ustora.Web.Controllers.HomeController.Index (Ustora.Web)" in 9043.1424ms
+2019-01-31 12:46:53.935 +03:00 [Information] Executed endpoint '"Ustora.Web.Controllers.HomeController.Index (Ustora.Web)"'
+2019-01-31 12:46:53.963 +03:00 [Information] Request finished in 9289.5151ms 200 text/html; charset=utf-8
+2019-01-31 12:48:22.654 +03:00 [Information] User profile is available. Using '"C:\Users\alioh\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-01-31 12:48:23.676 +03:00 [Warning] No type was specified for the decimal column '"OldPrice"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2019-01-31 12:48:23.677 +03:00 [Warning] No type was specified for the decimal column '"Price"' on entity type '"Product"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2019-01-31 12:48:23.761 +03:00 [Information] Entity Framework Core "2.2.1-servicing-10028" initialized '"UstoraContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-01-31 12:48:24.096 +03:00 [Information] Entity Framework Core "2.2.1-servicing-10028" initialized '"UstoraContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-01-31 12:48:24.485 +03:00 [Information] Executed DbCommand ("103"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END"
+2019-01-31 12:48:24.485 +03:00 [Information] Executed DbCommand ("103"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Slides] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END"
+2019-01-31 12:48:25.855 +03:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/  
+2019-01-31 12:48:25.997 +03:00 [Information] Executing endpoint '"Ustora.Web.Controllers.HomeController.Index (Ustora.Web)"'
+2019-01-31 12:48:26.046 +03:00 [Information] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing action "Ustora.Web.Controllers.HomeController.Index (Ustora.Web)"
+2019-01-31 12:48:26.084 +03:00 [Information] Executing action method "Ustora.Web.Controllers.HomeController.Index (Ustora.Web)" - Validation state: Valid
+2019-01-31 12:48:26.090 +03:00 [Information] Log: 573977734
+2019-01-31 12:48:26.092 +03:00 [Information] Entity Framework Core "2.2.1-servicing-10028" initialized '"UstoraContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-01-31 12:48:26.147 +03:00 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[SlideId], [s].[Description], [s].[ImagePath], [s].[Link], [s].[Name]
+FROM [Slides] AS [s]"
+2019-01-31 12:48:26.213 +03:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[BrandId], [b].[ImagePath], [b].[Name]
+FROM [Brands] AS [b]"
+2019-01-31 12:48:26.248 +03:00 [Warning] Query: '"(from Product <generated>_1 in DbSet<Product> select [<generated>_1]).Take(__p_0)"' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-01-31 12:48:26.312 +03:00 [Information] Executed DbCommand ("40"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(@__p_0) [p].[ProductId], [p].[BrandId], [p].[DateCreate], [p].[DateUpdate], [p].[Description], [p].[ImagePath], [p].[MainSliderShow], [p].[Name], [p].[OldPrice], [p].[Price], [p].[SectionId], [p].[TopSellerShow]
+FROM [Products] AS [p]"
+2019-01-31 12:48:26.369 +03:00 [Information] Log: 573978015
+2019-01-31 12:48:26.376 +03:00 [Information] Executed action method "Ustora.Web.Controllers.HomeController.Index (Ustora.Web)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 287.7225ms.
+2019-01-31 12:48:30.571 +03:00 [Information] Executing ViewResult, running view "Index".
+2019-01-31 12:48:31.622 +03:00 [Information] Executed ViewResult - view "Index" executed in 5220.8769ms.
+2019-01-31 12:48:31.636 +03:00 [Information] Executed action "Ustora.Web.Controllers.HomeController.Index (Ustora.Web)" in 5585.0718ms
+2019-01-31 12:48:31.637 +03:00 [Information] Executed endpoint '"Ustora.Web.Controllers.HomeController.Index (Ustora.Web)"'
+2019-01-31 12:48:31.681 +03:00 [Information] Request finished in 5815.9547ms 200 text/html; charset=utf-8
+2019-01-31 15:03:26.739 +03:00 [INF] User profile is available. Using 'C:\Users\alioh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-01-31 15:03:28.142 +03:00 [WRN] No type was specified for the decimal column 'OldPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2019-01-31 15:03:28.142 +03:00 [WRN] No type was specified for the decimal column 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2019-01-31 15:03:28.245 +03:00 [INF] Entity Framework Core 2.2.1-servicing-10028 initialized 'UstoraContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-01-31 15:03:28.646 +03:00 [INF] Entity Framework Core 2.2.1-servicing-10028 initialized 'UstoraContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-01-31 15:03:30.582 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/  
+2019-01-31 15:03:30.749 +03:00 [INF] Executing endpoint 'Ustora.Web.Controllers.HomeController.Index (Ustora.Web)'
+2019-01-31 15:03:30.815 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action Ustora.Web.Controllers.HomeController.Index (Ustora.Web)
+2019-01-31 15:03:30.862 +03:00 [INF] Executing action method Ustora.Web.Controllers.HomeController.Index (Ustora.Web) - Validation state: "Valid"
+2019-01-31 15:03:30.863 +03:00 [INF] Entity Framework Core 2.2.1-servicing-10028 initialized 'UstoraContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-01-31 15:03:34.417 +03:00 [INF] Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Slides] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2019-01-31 15:03:34.417 +03:00 [INF] Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2019-01-31 15:03:34.417 +03:00 [INF] Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SlideId], [s].[Description], [s].[ImagePath], [s].[Link], [s].[Name]
+FROM [Slides] AS [s]
+2019-01-31 15:03:34.513 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BrandId], [b].[ImagePath], [b].[Name]
+FROM [Brands] AS [b]
+2019-01-31 15:03:34.550 +03:00 [WRN] Query: '(from Product <generated>_1 in DbSet<Product> select [<generated>_1]).Take(__p_0)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-01-31 15:03:34.613 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[ProductId], [p].[BrandId], [p].[DateCreate], [p].[DateUpdate], [p].[Description], [p].[ImagePath], [p].[MainSliderShow], [p].[Name], [p].[OldPrice], [p].[Price], [p].[SectionId], [p].[TopSellerShow]
+FROM [Products] AS [p]
+2019-01-31 15:03:34.712 +03:00 [INF] Executed action method Ustora.Web.Controllers.HomeController.Index (Ustora.Web), returned result Microsoft.AspNetCore.Mvc.ViewResult in 3846.9953ms.
+2019-01-31 15:03:40.131 +03:00 [INF] Executing ViewResult, running view Index.
+2019-01-31 15:03:41.273 +03:00 [INF] Executed ViewResult - view Index executed in 6539.7579000000005ms.
+2019-01-31 15:03:41.279 +03:00 [INF] Executed action Ustora.Web.Controllers.HomeController.Index (Ustora.Web) in 10457.4778ms
+2019-01-31 15:03:41.280 +03:00 [INF] Executed endpoint 'Ustora.Web.Controllers.HomeController.Index (Ustora.Web)'
+2019-01-31 15:03:41.315 +03:00 [INF] Request finished in 10733.9258ms 200 text/html; charset=utf-8
+2019-01-31 15:03:41.394 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/css/fonts.css  
+2019-01-31 15:03:41.490 +03:00 [INF] Connection id "0HLK7EGELH6DL", Request id "0HLK7EGELH6DL:00000002": the application aborted the connection.
+2019-01-31 15:03:41.491 +03:00 [INF] Sending file. Request path: '/css/fonts.css'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\css\fonts.css'
+2019-01-31 15:03:41.491 +03:00 [INF] Request finished in 96.9809ms 0 text/css
+2019-01-31 15:07:06.830 +03:00 [INF] User profile is available. Using 'C:\Users\alioh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-01-31 15:07:08.138 +03:00 [WRN] No type was specified for the decimal column 'OldPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2019-01-31 15:07:08.138 +03:00 [WRN] No type was specified for the decimal column 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2019-01-31 15:07:08.229 +03:00 [INF] Entity Framework Core 2.2.1-servicing-10028 initialized 'UstoraContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-01-31 15:07:08.581 +03:00 [INF] Entity Framework Core 2.2.1-servicing-10028 initialized 'UstoraContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-01-31 15:07:09.023 +03:00 [INF] Executed DbCommand (158ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Slides] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2019-01-31 15:07:09.023 +03:00 [INF] Executed DbCommand (158ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2019-01-31 15:07:09.668 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/  
+2019-01-31 15:07:09.668 +03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:1783/  0
+2019-01-31 15:07:09.780 +03:00 [INF] Request finished in 114.1016ms 200 
+2019-01-31 15:07:09.864 +03:00 [INF] Executing endpoint 'Ustora.Web.Controllers.HomeController.Index (Ustora.Web)'
+2019-01-31 15:07:09.916 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action Ustora.Web.Controllers.HomeController.Index (Ustora.Web)
+2019-01-31 15:07:09.958 +03:00 [INF] Executing action method Ustora.Web.Controllers.HomeController.Index (Ustora.Web) - Validation state: "Valid"
+2019-01-31 15:07:09.962 +03:00 [INF] test logger
+2019-01-31 15:07:09.963 +03:00 [INF] Entity Framework Core 2.2.1-servicing-10028 initialized 'UstoraContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-01-31 15:07:10.013 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SlideId], [s].[Description], [s].[ImagePath], [s].[Link], [s].[Name]
+FROM [Slides] AS [s]
+2019-01-31 15:07:10.074 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BrandId], [b].[ImagePath], [b].[Name]
+FROM [Brands] AS [b]
+2019-01-31 15:07:10.106 +03:00 [WRN] Query: '(from Product <generated>_1 in DbSet<Product> select [<generated>_1]).Take(__p_0)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-01-31 15:07:10.170 +03:00 [INF] Executed DbCommand (42ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[ProductId], [p].[BrandId], [p].[DateCreate], [p].[DateUpdate], [p].[Description], [p].[ImagePath], [p].[MainSliderShow], [p].[Name], [p].[OldPrice], [p].[Price], [p].[SectionId], [p].[TopSellerShow]
+FROM [Products] AS [p]
+2019-01-31 15:07:10.226 +03:00 [INF] Executed action method Ustora.Web.Controllers.HomeController.Index (Ustora.Web), returned result Microsoft.AspNetCore.Mvc.ViewResult in 265.3473ms.
+2019-01-31 15:07:15.246 +03:00 [INF] Executing ViewResult, running view Index.
+2019-01-31 15:07:16.380 +03:00 [INF] Executed ViewResult - view Index executed in 6135.1643ms.
+2019-01-31 15:07:16.383 +03:00 [INF] Executed action Ustora.Web.Controllers.HomeController.Index (Ustora.Web) in 6463.7151ms
+2019-01-31 15:07:16.384 +03:00 [INF] Executed endpoint 'Ustora.Web.Controllers.HomeController.Index (Ustora.Web)'
+2019-01-31 15:07:16.403 +03:00 [INF] Request finished in 6743.1886ms 200 text/html; charset=utf-8
+2019-01-31 15:07:16.532 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/css/style.css  
+2019-01-31 15:07:16.537 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/css/responsive.css  
+2019-01-31 15:07:16.540 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/css/fonts.css  
+2019-01-31 15:07:16.540 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/css/owl.carousel.css  
+2019-01-31 15:07:16.600 +03:00 [INF] Sending file. Request path: '/css/style.css'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\css\style.css'
+2019-01-31 15:07:16.600 +03:00 [INF] Sending file. Request path: '/css/fonts.css'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\css\fonts.css'
+2019-01-31 15:07:16.600 +03:00 [INF] Sending file. Request path: '/css/responsive.css'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\css\responsive.css'
+2019-01-31 15:07:16.600 +03:00 [INF] Sending file. Request path: '/css/owl.carousel.css'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\css\owl.carousel.css'
+2019-01-31 15:07:16.602 +03:00 [INF] Request finished in 69.6425ms 200 text/css
+2019-01-31 15:07:16.602 +03:00 [INF] Request finished in 65.6507ms 200 text/css
+2019-01-31 15:07:16.602 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/logo.png  
+2019-01-31 15:07:16.602 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/h4-slide.png  
+2019-01-31 15:07:16.602 +03:00 [INF] Request finished in 61.9579ms 200 text/css
+2019-01-31 15:07:16.604 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/h4-slide2.png  
+2019-01-31 15:07:16.604 +03:00 [INF] Request finished in 63.0843ms 200 text/css
+2019-01-31 15:07:16.604 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/h4-slide3.png  
+2019-01-31 15:07:16.610 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/product-2.jpg  
+2019-01-31 15:07:16.610 +03:00 [INF] Sending file. Request path: '/img/logo.png'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\img\logo.png'
+2019-01-31 15:07:16.610 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/product-3.jpg  
+2019-01-31 15:07:16.611 +03:00 [INF] Request finished in 8.3207ms 200 image/png
+2019-01-31 15:07:16.611 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/product-1.jpg  
+2019-01-31 15:07:16.611 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/brand3.png  
+2019-01-31 15:07:16.613 +03:00 [INF] Sending file. Request path: '/img/brand3.png'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\img\brand3.png'
+2019-01-31 15:07:16.613 +03:00 [INF] Sending file. Request path: '/img/product-2.jpg'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\img\product-2.jpg'
+2019-01-31 15:07:16.614 +03:00 [INF] Request finished in 2.729ms 200 image/png
+2019-01-31 15:07:16.614 +03:00 [INF] Request finished in 3.6831ms 200 image/jpeg
+2019-01-31 15:07:16.614 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/js/bootstrap.min.js  
+2019-01-31 15:07:16.614 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/brand2.png  
+2019-01-31 15:07:16.614 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/brand1.png  
+2019-01-31 15:07:16.615 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/h4-slide4.png  
+2019-01-31 15:07:16.620 +03:00 [INF] Sending file. Request path: '/img/brand2.png'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\img\brand2.png'
+2019-01-31 15:07:16.620 +03:00 [INF] Sending file. Request path: '/img/brand1.png'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\img\brand1.png'
+2019-01-31 15:07:16.620 +03:00 [INF] Request finished in 6.3952ms 200 image/png
+2019-01-31 15:07:16.620 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/js/owl.carousel.min.js  
+2019-01-31 15:07:16.620 +03:00 [INF] Request finished in 6.3519ms 200 image/png
+2019-01-31 15:07:16.620 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/js/jquery.easing.1.3.min.js  
+2019-01-31 15:07:16.624 +03:00 [INF] Sending file. Request path: '/js/jquery.easing.1.3.min.js'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\js\jquery.easing.1.3.min.js'
+2019-01-31 15:07:16.627 +03:00 [INF] Request finished in 6.3148ms 200 application/javascript
+2019-01-31 15:07:16.627 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/js/bxslider.min.js  
+2019-01-31 15:07:16.627 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/js/script.slider.js  
+2019-01-31 15:07:16.621 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/js/jquery.sticky.js  
+2019-01-31 15:07:16.639 +03:00 [INF] Sending file. Request path: '/js/script.slider.js'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\js\script.slider.js'
+2019-01-31 15:07:16.639 +03:00 [INF] Request finished in 12.2326ms 200 application/javascript
+2019-01-31 15:07:16.640 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/css/font-awesome.min.css  
+2019-01-31 15:07:16.640 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/js/main.js  
+2019-01-31 15:07:16.641 +03:00 [INF] Sending file. Request path: '/js/owl.carousel.min.js'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\js\owl.carousel.min.js'
+2019-01-31 15:07:16.641 +03:00 [INF] Request finished in 20.3476ms 200 application/javascript
+2019-01-31 15:07:16.641 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/css/bootstrap.min.css  
+2019-01-31 15:07:16.643 +03:00 [INF] Sending file. Request path: '/js/bootstrap.min.js'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\js\bootstrap.min.js'
+2019-01-31 15:07:16.643 +03:00 [INF] Request finished in 29.4223ms 200 application/javascript
+2019-01-31 15:07:16.651 +03:00 [INF] Sending file. Request path: '/css/font-awesome.min.css'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\css\font-awesome.min.css'
+2019-01-31 15:07:16.654 +03:00 [INF] Request finished in 11.8251ms 200 text/css
+2019-01-31 15:07:16.657 +03:00 [INF] Sending file. Request path: '/img/product-3.jpg'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\img\product-3.jpg'
+2019-01-31 15:07:16.657 +03:00 [INF] Request finished in 47.3507ms 200 image/jpeg
+2019-01-31 15:07:16.658 +03:00 [INF] Sending file. Request path: '/img/product-1.jpg'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\img\product-1.jpg'
+2019-01-31 15:07:16.658 +03:00 [INF] Request finished in 46.8352ms 200 image/jpeg
+2019-01-31 15:07:16.739 +03:00 [INF] Sending file. Request path: '/js/jquery.sticky.js'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\js\jquery.sticky.js'
+2019-01-31 15:07:16.739 +03:00 [INF] Request finished in 118.0255ms 200 application/javascript
+2019-01-31 15:07:16.739 +03:00 [INF] Sending file. Request path: '/js/main.js'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\js\main.js'
+2019-01-31 15:07:16.739 +03:00 [INF] Request finished in 99.5836ms 200 application/javascript
+2019-01-31 15:07:16.742 +03:00 [INF] Sending file. Request path: '/css/bootstrap.min.css'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\css\bootstrap.min.css'
+2019-01-31 15:07:16.742 +03:00 [INF] Request finished in 101.3464ms 200 text/css
+2019-01-31 15:07:16.742 +03:00 [INF] Sending file. Request path: '/img/h4-slide.png'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\img\h4-slide.png'
+2019-01-31 15:07:16.742 +03:00 [INF] Request finished in 139.877ms 200 image/png
+2019-01-31 15:07:16.742 +03:00 [INF] Sending file. Request path: '/js/bxslider.min.js'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\js\bxslider.min.js'
+2019-01-31 15:07:16.743 +03:00 [INF] Request finished in 115.8783ms 200 application/javascript
+2019-01-31 15:07:16.758 +03:00 [INF] Sending file. Request path: '/img/h4-slide4.png'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\img\h4-slide4.png'
+2019-01-31 15:07:16.758 +03:00 [INF] Request finished in 143.1181ms 200 image/png
+2019-01-31 15:07:16.760 +03:00 [INF] Sending file. Request path: '/img/h4-slide3.png'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\img\h4-slide3.png'
+2019-01-31 15:07:16.760 +03:00 [INF] Request finished in 155.6428ms 200 image/png
+2019-01-31 15:07:16.760 +03:00 [INF] Sending file. Request path: '/img/h4-slide2.png'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\img\h4-slide2.png'
+2019-01-31 15:07:16.760 +03:00 [INF] Request finished in 156.4149ms 200 image/png
+2019-01-31 15:07:16.851 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/fonts/fontawesome-webfont.woff?v=4.2.0  
+2019-01-31 15:07:16.858 +03:00 [INF] Sending file. Request path: '/fonts/fontawesome-webfont.woff'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\fonts\fontawesome-webfont.woff'
+2019-01-31 15:07:16.858 +03:00 [INF] Request finished in 7.3347ms 200 application/font-woff
+2019-01-31 15:07:16.877 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/favicon.ico  
+2019-01-31 15:07:16.896 +03:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\favicon.ico'
+2019-01-31 15:07:16.896 +03:00 [INF] Request finished in 19.395ms 200 image/x-icon
+2019-01-31 15:09:32.711 +03:00 [INF] User profile is available. Using 'C:\Users\alioh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-01-31 15:09:33.924 +03:00 [WRN] No type was specified for the decimal column 'OldPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2019-01-31 15:09:33.924 +03:00 [WRN] No type was specified for the decimal column 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2019-01-31 15:09:34.014 +03:00 [INF] Entity Framework Core 2.2.1-servicing-10028 initialized 'UstoraContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-01-31 15:09:34.405 +03:00 [INF] Entity Framework Core 2.2.1-servicing-10028 initialized 'UstoraContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-01-31 15:09:34.885 +03:00 [INF] Executed DbCommand (130ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2019-01-31 15:09:34.885 +03:00 [INF] Executed DbCommand (130ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Slides] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2019-01-31 15:09:35.512 +03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:1783/  0
+2019-01-31 15:09:35.512 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/  
+2019-01-31 15:09:35.631 +03:00 [INF] Request finished in 118.9708ms 200 
+2019-01-31 15:09:35.721 +03:00 [INF] Executing endpoint 'Ustora.Web.Controllers.HomeController.Index (Ustora.Web)'
+2019-01-31 15:09:35.770 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action Ustora.Web.Controllers.HomeController.Index (Ustora.Web)
+2019-01-31 15:09:35.810 +03:00 [INF] Executing action method Ustora.Web.Controllers.HomeController.Index (Ustora.Web) - Validation state: "Valid"
+2019-01-31 15:09:35.814 +03:00 [INF] test logger
+2019-01-31 15:09:35.815 +03:00 [INF] Entity Framework Core 2.2.1-servicing-10028 initialized 'UstoraContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-01-31 15:09:35.865 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SlideId], [s].[Description], [s].[ImagePath], [s].[Link], [s].[Name]
+FROM [Slides] AS [s]
+2019-01-31 15:09:35.933 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BrandId], [b].[ImagePath], [b].[Name]
+FROM [Brands] AS [b]
+2019-01-31 15:09:35.970 +03:00 [WRN] Query: '(from Product <generated>_1 in DbSet<Product> select [<generated>_1]).Take(__p_0)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-01-31 15:09:36.048 +03:00 [INF] Executed DbCommand (54ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[ProductId], [p].[BrandId], [p].[DateCreate], [p].[DateUpdate], [p].[Description], [p].[ImagePath], [p].[MainSliderShow], [p].[Name], [p].[OldPrice], [p].[Price], [p].[SectionId], [p].[TopSellerShow]
+FROM [Products] AS [p]
+2019-01-31 15:09:36.109 +03:00 [INF] Executed action method Ustora.Web.Controllers.HomeController.Index (Ustora.Web), returned result Microsoft.AspNetCore.Mvc.ViewResult in 296.1614ms.
+2019-01-31 15:09:41.053 +03:00 [INF] Executing ViewResult, running view Index.
+2019-01-31 15:09:42.116 +03:00 [INF] Executed ViewResult - view Index executed in 5987.2866ms.
+2019-01-31 15:09:42.121 +03:00 [INF] Executed action Ustora.Web.Controllers.HomeController.Index (Ustora.Web) in 6347.3112ms
+2019-01-31 15:09:42.121 +03:00 [INF] Executed endpoint 'Ustora.Web.Controllers.HomeController.Index (Ustora.Web)'
+2019-01-31 15:09:42.140 +03:00 [INF] Request finished in 6636.8793ms 200 text/html; charset=utf-8
+2019-01-31 15:11:10.307 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/  
+2019-01-31 15:11:10.308 +03:00 [INF] Executing endpoint 'Ustora.Web.Controllers.HomeController.Index (Ustora.Web)'
+2019-01-31 15:11:10.309 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action Ustora.Web.Controllers.HomeController.Index (Ustora.Web)
+2019-01-31 15:11:10.309 +03:00 [INF] Executing action method Ustora.Web.Controllers.HomeController.Index (Ustora.Web) - Validation state: "Valid"
+2019-01-31 15:11:10.309 +03:00 [INF] test logger
+2019-01-31 15:11:10.309 +03:00 [INF] Entity Framework Core 2.2.1-servicing-10028 initialized 'UstoraContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-01-31 15:11:10.313 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SlideId], [s].[Description], [s].[ImagePath], [s].[Link], [s].[Name]
+FROM [Slides] AS [s]
+2019-01-31 15:11:10.314 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BrandId], [b].[ImagePath], [b].[Name]
+FROM [Brands] AS [b]
+2019-01-31 15:11:10.317 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[ProductId], [p].[BrandId], [p].[DateCreate], [p].[DateUpdate], [p].[Description], [p].[ImagePath], [p].[MainSliderShow], [p].[Name], [p].[OldPrice], [p].[Price], [p].[SectionId], [p].[TopSellerShow]
+FROM [Products] AS [p]
+2019-01-31 15:11:10.318 +03:00 [INF] Executed action method Ustora.Web.Controllers.HomeController.Index (Ustora.Web), returned result Microsoft.AspNetCore.Mvc.ViewResult in 8.5067ms.
+2019-01-31 15:11:10.324 +03:00 [INF] Executing ViewResult, running view Index.
+2019-01-31 15:11:10.330 +03:00 [INF] Executed ViewResult - view Index executed in 12.2019ms.
+2019-01-31 15:11:10.330 +03:00 [INF] Executed action Ustora.Web.Controllers.HomeController.Index (Ustora.Web) in 21.3506ms
+2019-01-31 15:11:10.330 +03:00 [INF] Executed endpoint 'Ustora.Web.Controllers.HomeController.Index (Ustora.Web)'
+2019-01-31 15:11:10.330 +03:00 [INF] Request finished in 22.9366ms 200 text/html; charset=utf-8
+2019-01-31 15:11:10.420 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/css/bootstrap.min.css  
+2019-01-31 15:11:10.420 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/css/font-awesome.min.css  
+2019-01-31 15:11:10.425 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/css/fonts.css  
+2019-01-31 15:11:10.426 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/css/style.css  
+2019-01-31 15:11:10.429 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/css/responsive.css  
+2019-01-31 15:11:10.457 +03:00 [INF] The file /css/fonts.css was not modified
+2019-01-31 15:11:10.457 +03:00 [INF] The file /css/responsive.css was not modified
+2019-01-31 15:11:10.457 +03:00 [INF] The file /css/bootstrap.min.css was not modified
+2019-01-31 15:11:10.457 +03:00 [INF] The file /css/font-awesome.min.css was not modified
+2019-01-31 15:11:10.457 +03:00 [INF] The file /css/style.css was not modified
+2019-01-31 15:11:10.462 +03:00 [INF] Request finished in 41.6637ms 304 text/css
+2019-01-31 15:11:10.462 +03:00 [INF] Request finished in 33.1599ms 304 text/css
+2019-01-31 15:11:10.462 +03:00 [INF] Request finished in 36.188ms 304 text/css
+2019-01-31 15:11:10.462 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/css/owl.carousel.css  
+2019-01-31 15:11:10.462 +03:00 [INF] Request finished in 36.6368ms 304 text/css
+2019-01-31 15:11:10.462 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/js/main.js  
+2019-01-31 15:11:10.462 +03:00 [INF] Request finished in 41.8012ms 304 text/css
+2019-01-31 15:11:10.462 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/js/owl.carousel.min.js  
+2019-01-31 15:11:10.462 +03:00 [INF] The file /css/owl.carousel.css was not modified
+2019-01-31 15:11:10.462 +03:00 [INF] The file /js/owl.carousel.min.js was not modified
+2019-01-31 15:11:10.462 +03:00 [INF] Request finished in 0.3399ms 304 text/css
+2019-01-31 15:11:10.462 +03:00 [INF] Request finished in 0.1813ms 304 application/javascript
+2019-01-31 15:11:10.462 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/js/jquery.easing.1.3.min.js  
+2019-01-31 15:11:10.462 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/js/bxslider.min.js  
+2019-01-31 15:11:10.462 +03:00 [INF] The file /js/main.js was not modified
+2019-01-31 15:11:10.462 +03:00 [INF] Request finished in 0.4888ms 304 application/javascript
+2019-01-31 15:11:10.463 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/js/script.slider.js  
+2019-01-31 15:11:10.462 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/js/jquery.sticky.js  
+2019-01-31 15:11:10.463 +03:00 [INF] The file /js/jquery.easing.1.3.min.js was not modified
+2019-01-31 15:11:10.462 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/js/bootstrap.min.js  
+2019-01-31 15:11:10.463 +03:00 [INF] Request finished in 0.2559ms 304 application/javascript
+2019-01-31 15:11:10.463 +03:00 [INF] The file /js/bxslider.min.js was not modified
+2019-01-31 15:11:10.463 +03:00 [INF] Request finished in 0.3051ms 304 application/javascript
+2019-01-31 15:11:10.463 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/logo.png  
+2019-01-31 15:11:10.463 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/h4-slide2.png  
+2019-01-31 15:11:10.463 +03:00 [INF] The file /js/jquery.sticky.js was not modified
+2019-01-31 15:11:10.463 +03:00 [INF] The file /js/script.slider.js was not modified
+2019-01-31 15:11:10.463 +03:00 [INF] Request finished in 0.7615ms 304 application/javascript
+2019-01-31 15:11:10.463 +03:00 [INF] The file /js/bootstrap.min.js was not modified
+2019-01-31 15:11:10.463 +03:00 [INF] Request finished in 0.2914ms 304 application/javascript
+2019-01-31 15:11:10.463 +03:00 [INF] Request finished in 0.8806ms 304 application/javascript
+2019-01-31 15:11:10.463 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/h4-slide4.png  
+2019-01-31 15:11:10.463 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/brand1.png  
+2019-01-31 15:11:10.463 +03:00 [INF] The file /img/h4-slide2.png was not modified
+2019-01-31 15:11:10.463 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/brand3.png  
+2019-01-31 15:11:10.463 +03:00 [INF] The file /img/h4-slide4.png was not modified
+2019-01-31 15:11:10.463 +03:00 [INF] Request finished in 0.2486ms 304 image/png
+2019-01-31 15:11:10.463 +03:00 [INF] Request finished in 0.1664ms 304 image/png
+2019-01-31 15:11:10.463 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/product-3.jpg  
+2019-01-31 15:11:10.463 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/h4-slide.png  
+2019-01-31 15:11:10.463 +03:00 [INF] The file /img/product-3.jpg was not modified
+2019-01-31 15:11:10.463 +03:00 [INF] The file /img/h4-slide.png was not modified
+2019-01-31 15:11:10.463 +03:00 [INF] Request finished in 0.1831ms 304 image/jpeg
+2019-01-31 15:11:10.463 +03:00 [INF] Request finished in 0.179ms 304 image/png
+2019-01-31 15:11:10.463 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/h4-slide3.png  
+2019-01-31 15:11:10.463 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/product-2.jpg  
+2019-01-31 15:11:10.463 +03:00 [INF] The file /img/h4-slide3.png was not modified
+2019-01-31 15:11:10.463 +03:00 [INF] The file /img/product-2.jpg was not modified
+2019-01-31 15:11:10.463 +03:00 [INF] Request finished in 0.1632ms 304 image/png
+2019-01-31 15:11:10.463 +03:00 [INF] Request finished in 0.1664ms 304 image/jpeg
+2019-01-31 15:11:10.463 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/product-1.jpg  
+2019-01-31 15:11:10.464 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/brand2.png  
+2019-01-31 15:11:10.464 +03:00 [INF] The file /img/product-1.jpg was not modified
+2019-01-31 15:11:10.464 +03:00 [INF] The file /img/brand2.png was not modified
+2019-01-31 15:11:10.464 +03:00 [INF] Request finished in 0.1685ms 304 image/jpeg
+2019-01-31 15:11:10.464 +03:00 [INF] Request finished in 0.1655ms 304 image/png
+2019-01-31 15:11:10.497 +03:00 [INF] Sending file. Request path: '/img/brand3.png'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\img\brand3.png'
+2019-01-31 15:11:10.497 +03:00 [INF] Sending file. Request path: '/img/logo.png'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\img\logo.png'
+2019-01-31 15:11:10.497 +03:00 [INF] Sending file. Request path: '/img/brand1.png'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\img\brand1.png'
+2019-01-31 15:11:10.499 +03:00 [INF] Request finished in 36.0455ms 200 image/png
+2019-01-31 15:11:10.499 +03:00 [INF] Request finished in 36.0335ms 200 image/png
+2019-01-31 15:11:10.499 +03:00 [INF] Request finished in 36.226ms 200 image/png
+2019-01-31 15:11:10.568 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/h4-slide4.png  
+2019-01-31 15:11:10.568 +03:00 [INF] The file /img/h4-slide4.png was not modified
+2019-01-31 15:11:10.569 +03:00 [INF] Request finished in 0.9499ms 304 image/png
+2019-01-31 15:11:10.569 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/h4-slide.png  
+2019-01-31 15:11:10.569 +03:00 [INF] The file /img/h4-slide.png was not modified
+2019-01-31 15:11:10.569 +03:00 [INF] Request finished in 0.2012ms 304 image/png
+2019-01-31 15:11:10.622 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/product-2.jpg  
+2019-01-31 15:11:10.622 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/product-3.jpg  
+2019-01-31 15:11:10.622 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/product-1.jpg  
+2019-01-31 15:11:10.622 +03:00 [INF] The file /img/product-3.jpg was not modified
+2019-01-31 15:11:10.622 +03:00 [INF] The file /img/product-2.jpg was not modified
+2019-01-31 15:11:10.622 +03:00 [INF] Request finished in 0.3095ms 304 image/jpeg
+2019-01-31 15:11:10.622 +03:00 [INF] Request finished in 0.3177ms 304 image/jpeg
+2019-01-31 15:11:10.622 +03:00 [INF] The file /img/product-1.jpg was not modified
+2019-01-31 15:11:10.622 +03:00 [INF] Request finished in 0.3709ms 304 image/jpeg
+2019-01-31 15:11:10.653 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/img/brand2.png  
+2019-01-31 15:11:10.653 +03:00 [INF] The file /img/brand2.png was not modified
+2019-01-31 15:11:10.653 +03:00 [INF] Request finished in 0.2829ms 304 image/png
+2019-01-31 15:11:35.520 +03:00 [INF] User profile is available. Using 'C:\Users\alioh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-01-31 15:11:36.718 +03:00 [WRN] No type was specified for the decimal column 'OldPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2019-01-31 15:11:36.718 +03:00 [WRN] No type was specified for the decimal column 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2019-01-31 15:11:36.816 +03:00 [INF] Entity Framework Core 2.2.1-servicing-10028 initialized 'UstoraContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-01-31 15:11:37.200 +03:00 [INF] Entity Framework Core 2.2.1-servicing-10028 initialized 'UstoraContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-01-31 15:11:37.709 +03:00 [INF] Executed DbCommand (157ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2019-01-31 15:11:37.709 +03:00 [INF] Executed DbCommand (157ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Slides] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2019-01-31 15:11:38.410 +03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:1783/  0
+2019-01-31 15:11:38.410 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/  
+2019-01-31 15:11:38.525 +03:00 [INF] Request finished in 115.8614ms 200 
+2019-01-31 15:11:38.609 +03:00 [INF] Executing endpoint 'Ustora.Web.Controllers.HomeController.Index (Ustora.Web)'
+2019-01-31 15:11:38.658 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action Ustora.Web.Controllers.HomeController.Index (Ustora.Web)
+2019-01-31 15:11:38.697 +03:00 [INF] Executing action method Ustora.Web.Controllers.HomeController.Index (Ustora.Web) - Validation state: "Valid"
+2019-01-31 15:11:38.699 +03:00 [INF] test logger
+2019-01-31 15:11:38.700 +03:00 [INF] Entity Framework Core 2.2.1-servicing-10028 initialized 'UstoraContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-01-31 15:11:38.747 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SlideId], [s].[Description], [s].[ImagePath], [s].[Link], [s].[Name]
+FROM [Slides] AS [s]
+2019-01-31 15:11:38.831 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BrandId], [b].[ImagePath], [b].[Name]
+FROM [Brands] AS [b]
+2019-01-31 15:11:38.871 +03:00 [WRN] Query: '(from Product <generated>_1 in DbSet<Product> select [<generated>_1]).Take(__p_0)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-01-31 15:11:38.948 +03:00 [INF] Executed DbCommand (51ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[ProductId], [p].[BrandId], [p].[DateCreate], [p].[DateUpdate], [p].[Description], [p].[ImagePath], [p].[MainSliderShow], [p].[Name], [p].[OldPrice], [p].[Price], [p].[SectionId], [p].[TopSellerShow]
+FROM [Products] AS [p]
+2019-01-31 15:11:39.004 +03:00 [INF] Executed action method Ustora.Web.Controllers.HomeController.Index (Ustora.Web), returned result Microsoft.AspNetCore.Mvc.ViewResult in 304.6381ms.
+2019-01-31 15:11:43.923 +03:00 [INF] Executing ViewResult, running view Index.
+2019-01-31 15:11:45.131 +03:00 [INF] Executed ViewResult - view Index executed in 6108.031ms.
+2019-01-31 15:11:45.135 +03:00 [INF] Executed action Ustora.Web.Controllers.HomeController.Index (Ustora.Web) in 6473.8924000000006ms
+2019-01-31 15:11:45.136 +03:00 [INF] Executed endpoint 'Ustora.Web.Controllers.HomeController.Index (Ustora.Web)'
+2019-01-31 15:11:45.155 +03:00 [INF] Request finished in 6752.6187ms 200 text/html; charset=utf-8
+2019-01-31 15:12:02.816 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:44359/  
+2019-01-31 15:12:02.816 +03:00 [INF] Executing endpoint 'Ustora.Web.Controllers.HomeController.Index (Ustora.Web)'
+2019-01-31 15:12:02.817 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action Ustora.Web.Controllers.HomeController.Index (Ustora.Web)
+2019-01-31 15:12:02.818 +03:00 [INF] Executing action method Ustora.Web.Controllers.HomeController.Index (Ustora.Web) - Validation state: "Valid"
+2019-01-31 15:12:02.818 +03:00 [INF] test logger
+2019-01-31 15:12:02.818 +03:00 [INF] Entity Framework Core 2.2.1-servicing-10028 initialized 'UstoraContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-01-31 15:12:02.820 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SlideId], [s].[Description], [s].[ImagePath], [s].[Link], [s].[Name]
+FROM [Slides] AS [s]
+2019-01-31 15:12:02.821 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BrandId], [b].[ImagePath], [b].[Name]
+FROM [Brands] AS [b]
+2019-01-31 15:12:02.823 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[ProductId], [p].[BrandId], [p].[DateCreate], [p].[DateUpdate], [p].[Description], [p].[ImagePath], [p].[MainSliderShow], [p].[Name], [p].[OldPrice], [p].[Price], [p].[SectionId], [p].[TopSellerShow]
+FROM [Products] AS [p]
+2019-01-31 15:12:02.824 +03:00 [INF] Executed action method Ustora.Web.Controllers.HomeController.Index (Ustora.Web), returned result Microsoft.AspNetCore.Mvc.ViewResult in 6.0260000000000007ms.
+2019-01-31 15:12:02.825 +03:00 [INF] Executing ViewResult, running view Index.
+2019-01-31 15:12:02.826 +03:00 [INF] Executed ViewResult - view Index executed in 2.3929ms.
+2019-01-31 15:12:02.826 +03:00 [INF] Executed action Ustora.Web.Controllers.HomeController.Index (Ustora.Web) in 8.8947ms
+2019-01-31 15:12:02.826 +03:00 [INF] Executed endpoint 'Ustora.Web.Controllers.HomeController.Index (Ustora.Web)'
+2019-01-31 15:12:02.826 +03:00 [INF] Request finished in 10.431ms 200 text/html; charset=utf-8
+2019-01-31 15:43:08.395 +03:00 [INF] User profile is available. Using 'C:\Users\alioh\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-01-31 15:43:09.572 +03:00 [WRN] No type was specified for the decimal column 'OldPrice' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2019-01-31 15:43:09.572 +03:00 [WRN] No type was specified for the decimal column 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2019-01-31 15:43:09.663 +03:00 [INF] Entity Framework Core 2.2.1-servicing-10028 initialized 'UstoraContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-01-31 15:43:10.031 +03:00 [INF] Entity Framework Core 2.2.1-servicing-10028 initialized 'UstoraContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-01-31 15:43:11.551 +03:00 [INF] Executed DbCommand (203ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Slides] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2019-01-31 15:43:11.551 +03:00 [INF] Executed DbCommand (203ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2019-01-31 15:43:12.044 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/  
+2019-01-31 15:43:12.186 +03:00 [INF] Executing endpoint 'Ustora.Web.Controllers.HomeController.Index (Ustora.Web)'
+2019-01-31 15:43:12.235 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action Ustora.Web.Controllers.HomeController.Index (Ustora.Web)
+2019-01-31 15:43:12.274 +03:00 [INF] Executing action method Ustora.Web.Controllers.HomeController.Index (Ustora.Web) - Validation state: "Valid"
+2019-01-31 15:43:12.277 +03:00 [INF] test logger
+2019-01-31 15:43:12.278 +03:00 [INF] Entity Framework Core 2.2.1-servicing-10028 initialized 'UstoraContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-01-31 15:43:12.338 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SlideId], [s].[Description], [s].[ImagePath], [s].[Link], [s].[Name]
+FROM [Slides] AS [s]
+2019-01-31 15:43:12.413 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BrandId], [b].[ImagePath], [b].[Name]
+FROM [Brands] AS [b]
+2019-01-31 15:43:12.446 +03:00 [WRN] Query: '(from Product <generated>_1 in DbSet<Product> select [<generated>_1]).Take(__p_0)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-01-31 15:43:12.519 +03:00 [INF] Executed DbCommand (47ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[ProductId], [p].[BrandId], [p].[DateCreate], [p].[DateUpdate], [p].[Description], [p].[ImagePath], [p].[MainSliderShow], [p].[Name], [p].[OldPrice], [p].[Price], [p].[SectionId], [p].[TopSellerShow]
+FROM [Products] AS [p]
+2019-01-31 15:43:12.575 +03:00 [INF] Executed action method Ustora.Web.Controllers.HomeController.Index (Ustora.Web), returned result Microsoft.AspNetCore.Mvc.ViewResult in 298.6138ms.
+2019-01-31 15:43:16.963 +03:00 [INF] Executing ViewResult, running view Index.
+2019-01-31 15:43:18.067 +03:00 [INF] Executed ViewResult - view Index executed in 5473.5408000000007ms.
+2019-01-31 15:43:18.075 +03:00 [INF] Executed action Ustora.Web.Controllers.HomeController.Index (Ustora.Web) in 5837.2266ms
+2019-01-31 15:43:18.076 +03:00 [INF] Executed endpoint 'Ustora.Web.Controllers.HomeController.Index (Ustora.Web)'
+2019-01-31 15:43:18.127 +03:00 [INF] Request finished in 6079.4416ms 200 text/html; charset=utf-8
+2019-01-31 15:43:18.148 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/css/fonts.css  
+2019-01-31 15:43:18.241 +03:00 [INF] Connection id "0HLK7F6KD6LK5", Request id "0HLK7F6KD6LK5:00000002": the application aborted the connection.
+2019-01-31 15:43:18.242 +03:00 [INF] Sending file. Request path: '/css/fonts.css'. Physical path: 'C:\!projects\Ustora\Ustora.Web\wwwroot\css\fonts.css'
+2019-01-31 15:43:18.242 +03:00 [INF] Request finished in 94.033ms 0 text/css
+2019-01-31 15:43:48.693 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/  
+2019-01-31 15:43:48.694 +03:00 [INF] Executing endpoint 'Ustora.Web.Controllers.HomeController.Index (Ustora.Web)'
+2019-01-31 15:43:48.695 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action Ustora.Web.Controllers.HomeController.Index (Ustora.Web)
+2019-01-31 15:43:48.695 +03:00 [INF] Executing action method Ustora.Web.Controllers.HomeController.Index (Ustora.Web) - Validation state: "Valid"
+2019-01-31 15:43:48.696 +03:00 [INF] test logger
+2019-01-31 15:43:48.696 +03:00 [INF] Entity Framework Core 2.2.1-servicing-10028 initialized 'UstoraContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-01-31 15:43:48.699 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SlideId], [s].[Description], [s].[ImagePath], [s].[Link], [s].[Name]
+FROM [Slides] AS [s]
+2019-01-31 15:43:48.700 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BrandId], [b].[ImagePath], [b].[Name]
+FROM [Brands] AS [b]
+2019-01-31 15:43:48.702 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [p].[ProductId], [p].[BrandId], [p].[DateCreate], [p].[DateUpdate], [p].[Description], [p].[ImagePath], [p].[MainSliderShow], [p].[Name], [p].[OldPrice], [p].[Price], [p].[SectionId], [p].[TopSellerShow]
+FROM [Products] AS [p]
+2019-01-31 15:43:48.702 +03:00 [INF] Executed action method Ustora.Web.Controllers.HomeController.Index (Ustora.Web), returned result Microsoft.AspNetCore.Mvc.ViewResult in 6.8724000000000007ms.
+2019-01-31 15:43:48.704 +03:00 [INF] Executing ViewResult, running view Index.
+2019-01-31 15:43:48.706 +03:00 [INF] Executed ViewResult - view Index executed in 3.5351000000000004ms.
+2019-01-31 15:43:48.706 +03:00 [INF] Executed action Ustora.Web.Controllers.HomeController.Index (Ustora.Web) in 11.0313ms
+2019-01-31 15:43:48.706 +03:00 [INF] Executed endpoint 'Ustora.Web.Controllers.HomeController.Index (Ustora.Web)'
+2019-01-31 15:43:48.706 +03:00 [INF] Request finished in 13.1764ms 200 text/html; charset=utf-8
