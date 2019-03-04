@@ -8,8 +8,5 @@ Some blocks not ready, but site has
 * Cart on session
 * Ordering
 
-## Demo
-[ustora.azurewebsites.net](https://ustora.azurewebsites.net/)
-
 ## Markup
 [freshdesignweb.com/ustora/](https://freshdesignweb.com/ustora/)
